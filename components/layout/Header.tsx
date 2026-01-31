@@ -38,7 +38,7 @@ export default function Header() {
                 <div className="flex items-center justify-between gap-8 h-19.5">
                     <ul className={`
                         header_nav_links flex items-center justify-center gap-8 h-full 
-                        max-xl:overflow-y-auto max-2xl:gap-4
+                        max-xl:overflow-y-auto max-2xl:gap-6
                         ${!openMenu ? "max-xl:-left-60" : "max-xl:left-0"} max-xl:transtiion-left max-xl:duration-600 max-xl:border-r max-xl:border-r-gray-200 dark:max-xl:border-r-gray-800 max-xl:fixed max-xl:top-0 max-xl:flex-col  max-xl:gap-4 max-xl:items-start max-xl:justify-start max-xl:bg-white dark:max-xl:bg-[hsl(225,40%,5%)] max-xl:z-20 max-xl:w-60 max-xl:p-10
                     `}>
                         <li className="mb-10 cursor-pointer xl:hidden" onClick={() => setOpenMenu(false)}>
@@ -72,16 +72,16 @@ export default function Header() {
                     <div className="max-xl:hidden">
                         <SearchBar search_placeholder={headerData.searchbar_placeholder} />
                     </div>
-                    <div className="flex gap-2 max-xl:gap-4">
+                    <div className="flex gap-4">
                         <DarkLightMode />
                         <Link href={headerData.header_url} className="header_logo_title flex items-center justify-center gap-2 hover:text-primary">
                             {/* Header Logo */}
                             {headerData.header_logo_src &&
-                                <ReactIcon name={headerData.header_logo_src} size={30} />
+                                <ReactIcon name={headerData.header_logo_src} size={26} />
                             }
 
                             {/* Header Tiitle */}
-                            <h2 className="text-3xl max-lg:text-2xl font-bold">
+                            <h2 className="text-2xl max-lg:text-xl font-bold">
                                 {headerData.header_text}
                             </h2>
                         </Link>

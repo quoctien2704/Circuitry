@@ -43,7 +43,7 @@ export function ArticleTrend({ article }: { article: ArticleData }) {
                 {/* Content Details Layer */}
                 <div className="flex gap-2 flex-col items-start px-2 h-full">
                     {/* Meta Row: Author and Date */}
-                    <div className="flex items-center gap-1 justify-between w-full flex-wrap">
+                    <div className="flex items-center gap-x-4 justify-between w-full flex-wrap">
                         <Link
                             aria-label={`Click this to go to ${article.title || 'this'} page`}
                             className="text-gray-600 dark:text-white hover:text-primary font-medium max-md:text-sm"

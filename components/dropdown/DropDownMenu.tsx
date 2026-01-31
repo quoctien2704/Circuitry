@@ -33,7 +33,7 @@ export function DropDownMenu({ items, link }: { items: LinkData[], link: NavLink
             aria-expanded={openMenu} // UX: Synchronize expanded state with logic
             aria-label={`Open ${link.name || 'navigation'} menu`} // SEO: Accessible name
             style={link.menu_page?.type === 'dropdown' ? { position: "relative" } : undefined}
-            className="outline-none h-full max-lg:flex max-lg:flex-col"
+            className="outline-none h-full max-xl:flex max-xl:flex-col"
         >
             <span
                 onClick={() => {
@@ -52,20 +52,20 @@ export function DropDownMenu({ items, link }: { items: LinkData[], link: NavLink
 
             {/*-- Dropdown Menu Panel --*/}
             <div className={`
-                lg:absolute
+                xl:absolute
                 z-15
-                top-full left-0 lg:rounded-b-2xl lg:shadow-lg
-                lg:bg-white lg:dark:bg-[hsl(225,40%,5%)] lg:dark:border lg:dark:border-gray-800
-                group-hover:lg:visible group-hover:lg:opacity-100 group-hover:lg:p-4
-                ${openMenu ? "visible opacity-100 p-4" : "invisible opacity-0 p-0 max-lg:h-0 overflow-hidden"}
+                top-full left-0 xl:rounded-b-2xl xl:shadow-lg
+                xl:bg-white xl:dark:bg-[hsl(225,40%,5%)] xl:dark:border xl:dark:border-gray-800
+                group-hover:xl:visible group-hover:xl:opacity-100 group-hover:xl:p-4
+                ${openMenu ? "visible opacity-100 p-4" : "invisible opacity-0 p-0 max-xl:h-0 overflow-hidden"}
             `}>
                 <ul className="
                     flex flex-col gap-4
-                    lg:items-start lg:justify-start
+                    xl:items-start xl:justify-start
                 " role="menu"> {/* SEO: Semantic role for menu lists */}
                     {items && items.length > 0 ? (
                         items.map((item) => (
-                            <li key={item.name} className="relative group/inner w-fit max-lg:ml-6" role="none">
+                            <li key={item.name} className="relative group/inner w-fit max-xl:ml-6" role="none">
                                 <Link
                                     role="menuitem" // SEO: Standard role for interactive menu links
                                     aria-label={`Maps to ${item.name}`}
