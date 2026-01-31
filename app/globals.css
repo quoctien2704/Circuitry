@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --primary-effective: var(--primary);
+    --secondary-effective: var(--secondary);
+  }
+
+  .dark {
+    --background: 225 40% 5%;
+    --foreground: 210 40% 98%;
+    --primary-effective: var(--dark_primary);
+    --secondary-effective: var(--dark_secondary);
+  }
+
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
+  }
+}
+
+@theme inline {
+  /* Tailwind sẽ sử dụng biến trung gian này */
+  --color-primary: var(--primary-effective);
+  --color-secondary: var(--secondary-effective);
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+  max-width: 100%;
+}
+
+.swiper-slide {
+  height: 500px;
+  /* hoặc chiều cao mong muốn */
+}
+
+.swiper-slide {
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  height: 100%;
+  max-height: 100%;
+}
+
+.swiper-wrapper {
+  max-height: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.text-outline {
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}

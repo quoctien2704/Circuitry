@@ -1,0 +1,3 @@
+Các ảnh cần nén
+Article Image 1,10,11,13,14,15,2,4,5,8,9
+Author: alex-carter.jpg

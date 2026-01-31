@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "name": "Alex Carter",
+        "slug": "@alex-carter",
+        "role": "Tech Editor",
+        "bio": "Alex is a technology editor who focuses on consumer electronics, accessories, and practical tech guides. He enjoys breaking down complex topics into easy-to-understand articles.",
+        "avatar": "/author/alex-carter.jpg",
+        "socials": {
+            "twitter": "https://twitter.com/alexcarter",
+            "linkedin": "https://linkedin.com/in/alexcarter",
+            "website": "https://alexcarter.dev"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Mia Johnson",
+        "slug": "@mia-johnson",
+        "role": "Product Reviewer",
+        "bio": "Mia specializes in reviewing tech accessories, audio devices, and mobile gadgets. Her writing helps readers make smarter buying decisions.",
+        "avatar": "/author/mia-johnson.jpg",
+        "socials": {
+            "twitter": "https://twitter.com/miajohnson",
+            "instagram": "https://instagram.com/miajohnson",
+            "website": "https://miajohnson.tech"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Daniel Wright",
+        "slug": "@daniel-wright",
+        "role": "Technology Writer",
+        "bio": "Daniel writes about emerging technology, smart home devices, and future trends. He is passionate about how technology improves everyday life.",
+        "avatar": "/author/daniel-wright.jpg",
+        "socials": {
+            "twitter": "https://twitter.com/danielwright",
+            "linkedin": "https://linkedin.com/in/danielwright",
+            "website": "https://danielwright.io"
+        }
+    }
+]

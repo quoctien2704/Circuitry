@@ -1,0 +1,1025 @@
+{
+    "header": {
+        "header_text": "Circuitry",
+        "header_logo_src": "fabook_icon",
+        "header_url": "/",
+        "nav_links": [
+            {
+                "name": "Home",
+                "menu_page": {
+                    "type": "dropdown",
+                    "items": [
+                        {
+                            "name": "Home 1",
+                            "href": "/"
+                        },
+                        {
+                            "name": "Home 2",
+                            "href": "/?home=2"
+                        },
+                        {
+                            "name": "Home 3",
+                            "href": "/?home=3"
+                        },
+                        {
+                            "name": "Home 4",
+                            "href": "/?home=4"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "About",
+                "menu_page": {
+                    "type": "dropdown",
+                    "items": [
+                        {
+                            "name": "About",
+                            "href": "/about"
+                        },
+                        {
+                            "name": "Terms",
+                            "href": "/terms"
+                        },
+                        {
+                            "name": "Changelog",
+                            "href": "/changelog"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "MemberShip",
+                "href": "/membership"
+            },
+            {
+                "name": "Category",
+                "href": "/category"
+            },
+            {
+                "name": "Author",
+                "href": "/author"
+            },
+            {
+                "name": "Blogs",
+                "menu_page": {
+                    "type": "dropdown",
+                    "items": [
+                        {
+                            "name": "Blog",
+                            "href": "/blog"
+                        },
+                        {
+                            "name": "Blog 01",
+                            "href": "/blog/1"
+                        },
+                        {
+                            "name": "Blog 02",
+                            "href": "/blog/2"
+                        },
+                        {
+                            "name": "Blog 03",
+                            "href": "/blog/3"
+                        },
+                        {
+                            "name": "Blog 04",
+                            "href": "/blog/4"
+                        }
+                    ]
+                }
+            }
+        ],
+        "searchbar_placeholder": "Search for Article"
+    },
+    "global_articles": {
+        "header": "Latest Blog",
+        "author_title": "Most Activity",
+        "author_title_link": "/author",
+        "authors_id": [
+            1,
+            2,
+            3
+        ],
+        "articles_id": [
+            1,
+            2,
+            3
+        ],
+        "article_title": "Most Popular Aritcle",
+        "article_title_link": "/blog"
+    },
+    "home": {
+        "layout_1": {
+            "slider": {
+                "header": "Welcome to Circuitry",
+                "sub_header": "Seeallpost",
+                "sub_header_href": "/blog",
+                "bottom_left_sliders_data": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "top_right_item_title": "Latest Gadgets",
+                "top_right_item_medium_title": "Tech News & Reviews",
+                "top_right_item_big_title": "Stay Updated",
+                "top_right_item_link_text": "Read More",
+                "top_right_item_link_href": "/blog/latest",
+                "top_right_item_extra_link_href": "/blog",
+                "bottom_right_image": {
+                    "src": "/pages/home/home_slider_right_bottom.jpg",
+                    "alt": "Latest Gadgets",
+                    "width": 600,
+                    "height": 600
+                },
+                "bottom_right_button_content": "Read more",
+                "bottom_right_button_href": "/blog"
+            },
+            "category": {
+                "categories": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "latest": {
+                "header": "Latest New",
+                "main_blog": 5,
+                "sub_blog": [
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "trend": {
+                "header": "Trending",
+                "blogs": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                ]
+            },
+            "subscribe": {
+                "header": "Stay Updated with Circuitry",
+                "sub_header": "Get the latest articles, tech insights, and accessory trends delivered straight to your inbox.",
+                "placeHolder": "Enter your email address",
+                "support_text": "No spam. Unsubscribe anytime. We respect your privacy."
+            }
+        },
+        "layout_2": {
+            "slider": {
+                "articles": [
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "blog": {
+                "title": "Insights from the World of Technology",
+                "sub_title": "Latest articles, reviews, and deep dives into electronics, hardware design, and future technology trends.",
+                "blog_id": 5
+            },
+            "column": {
+                "big_articles_blog_id": 6,
+                "grid_articles": 1
+            },
+            "latest": {
+                "main_blog_id": 8,
+                "extra_blog_id": [
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "banner": {
+                "left_top_article_id": 12,
+                "left_bottom_article_id": 13,
+                "left_right_article_id": 14
+            },
+            "subscribe": {
+                "image": {
+                    "src": "/support.jpg",
+                    "alt": "Circuitry Newsletter",
+                    "width": 600,
+                    "height": 400
+                },
+                "title": "Stay Updated with Circuitry",
+                "content": "Subscribe to receive the latest articles on electronics, embedded systems, hardware design, and emerging technology—delivered straight to your inbox.",
+                "placeHolder": "Enter your email address"
+            }
+        },
+        "layout_3": {
+            "hero": {
+                "left": {
+                    "sub_title": "Welcome to Circuitry",
+                    "title": "Wired for Innovation",
+                    "paragraph": "Your daily source for cutting-edge coding tutorials, system architecture deep dives, and tech industry insights.",
+                    "primary_button_content": "Start Reading",
+                    "primary_button_href": "/blog",
+                    "secondary_button_content": "About Us",
+                    "secondary_button_href": "/about"
+                },
+                "right": {
+                    "image_container": {
+                        "src": "/HomeHeroThreeImage.jpg",
+                        "width": 500,
+                        "height": 500,
+                        "alt": "Home Hero Three Image"
+                    },
+                    "content_container": [
+                        {
+                            "title": "15",
+                            "sub_title": "Expert Authors"
+                        },
+                        {
+                            "title": "24h",
+                            "sub_title": "Update Cycle"
+                        },
+                        {
+                            "title": "100%",
+                            "sub_title": "Tech Focused"
+                        }
+                    ]
+                }
+            },
+            "feature": {
+                "sub_ttile": "Editor's Pick",
+                "title": "Trending This Week",
+                "paragraph": "Hand-picked articles that are sparking conversations in the developer community right now.",
+                "articles_id": [
+                    1,
+                    3,
+                    7,
+                    12
+                ]
+            },
+            "video": {
+                "big_title": "Welcome to Circuitry",
+                "medium_title": "Webinars & Guides",
+                "small_title": "Video",
+                "button_cotent": "Browse Library",
+                "button_href": "#",
+                "video_src": {
+                    "title": "Understanding Microservices",
+                    "src": "https://www.youtube.com/embed/8p7t8L-WDd0"
+                }
+            },
+            "gallery": {
+                "title": {
+                    "top": "Circuitry",
+                    "mid": "Articles",
+                    "bottom": "Grallery"
+                },
+                "articles": [
+                    2,
+                    4,
+                    5,
+                    9,
+                    10,
+                    15
+                ]
+            },
+            "subscribe": {
+                "left": {
+                    "image": {
+                        "src": "/home_support_3.jpg",
+                        "width": 2000,
+                        "height": 2000,
+                        "alt": "Join the Circuitry"
+                    }
+                },
+                "right": {
+                    "span": {
+                        "text": "Join the",
+                        "highlight_text": "Circuitry"
+                    },
+                    "title": "Weekly Tech Digest",
+                    "form_placeholder": "Your email address...",
+                    "form_button_content": "Sign Up",
+                    "paragraph": "Receive curated content, coding challenges, and exclusive resources. No spam."
+                }
+            }
+        },
+        "layout_4": {
+            "news": {
+                "title": "Circuit Breakers: Latest News",
+                "article_matrix": [
+                    [
+                        1,
+                        2
+                    ],
+                    [
+                        3
+                    ],
+                    [
+                        4,
+                        5
+                    ],
+                    [
+                        6,
+                        7
+                    ]
+                ]
+            },
+            "content": {
+                "left": 8,
+                "right": {
+                    "title": "Engineering Deep Dives",
+                    "top": {
+                        "left_article": 9,
+                        "right_articles": [
+                            10,
+                            11,
+                            12,
+                            13
+                        ]
+                    },
+                    "bottom_article": 14
+                }
+            },
+            "promo": {
+                "banners": [
+                    {
+                        "image": {
+                            "src": "/pages/home/layout_4/Promo_Banner_1.jpg",
+                            "width": 2000,
+                            "height": 2000,
+                            "alt": "Building Strong Partnerships for Sustainable Growth"
+                        },
+                        "title": "Building Strong Partnerships for Sustainable Growth",
+                        "paragraph": "We collaborate with trusted partners to create long-term value and shared success.",
+                        "button_content": "Learn More",
+                        "button_href": "/"
+                    },
+                    {
+                        "image": {
+                            "src": "/pages/home/layout_4/Promo_Banner_2.jpg",
+                            "width": 2000,
+                            "height": 2000,
+                            "alt": "Meaningful Gifts, Lasting Connections"
+                        },
+                        "title": "Meaningful Gifts, Lasting Connections",
+                        "paragraph": "Our carefully selected gifts express appreciation and strengthen relationships.",
+                        "button_content": "View Gifts",
+                        "button_href": "/"
+                    },
+                    {
+                        "image": {
+                            "src": "/pages/home/layout_4/Promo_Banner_3.jpg",
+                            "width": 2000,
+                            "height": 2000,
+                            "alt": "Promoting Health and Team Spirit"
+                        },
+                        "title": "Promoting Health and Team Spirit",
+                        "paragraph": "We support sports activities to encourage an active lifestyle and positive energy.",
+                        "button_content": "Explore Activities",
+                        "button_href": "/"
+                    }
+                ]
+            },
+            "popular": {
+                "sub_title": "Trending Category",
+                "title": "Artificial Intelligence",
+                "left_title_category": "Machine Learning",
+                "blog_id": 6
+            },
+            "letter": {
+                "title": "Stay in the Loop",
+                "paragraph": "Get the most important tech news and coding tips delivered to your inbox weekly.",
+                "contents": [
+                    {
+                        "svg": {
+                            "svg": "engine_icon",
+                            "social_name": "Weekly Digest",
+                            "social_href": "/"
+                        },
+                        "content": "Curated articles from top engineers"
+                    },
+                    {
+                        "svg": {
+                            "svg": "tutorial_icon",
+                            "social_name": "Exclusive Content",
+                            "social_href": "/"
+                        },
+                        "content": "Early access to new tutorials"
+                    },
+                    {
+                        "svg": {
+                            "svg": "discord_icon",
+                            "social_name": "Community",
+                            "social_href": "/"
+                        },
+                        "content": "Access to our Discord server"
+                    },
+                    {
+                        "svg": {
+                            "svg": "guide_icon",
+                            "social_name": "Documentation",
+                            "social_href": "/"
+                        },
+                        "content": "Comprehensive guides for all skill levels"
+                    },
+                    {
+                        "svg": {
+                            "svg": "open_source_icon",
+                            "social_name": "Code Samples",
+                            "social_href": "/"
+                        },
+                        "content": "Open-source repositories and snippets"
+                    },
+                    {
+                        "svg": {
+                            "svg": "answer_icon",
+                            "social_name": "Expert Q&A",
+                            "social_href": "/"
+                        },
+                        "content": "Direct answers from industry professionals"
+                    }
+                ],
+                "form_title": "Join 50,000+ Developers",
+                "form_placeholder": "Enter your email address...",
+                "form_button_content": "Subscribe"
+            }
+        }
+    },
+    "about": {
+        "top": {
+            "sub_title": "About Circuitry",
+            "sub_title_href": "/about",
+            "title": "Where Electronics Meet Clear Thinking"
+        },
+        "column": {
+            "sub_title": "Our Focus",
+            "sub_title_href": "/blog",
+            "paragraph": "Circuitry delivers in-depth articles about electronics, hardware design, embedded systems, and modern technology trends — written for engineers, makers, and curious minds.",
+            "image": {
+                "src": "/pages/about/about_1.jpg",
+                "alt": "Our Focus Image Container",
+                "width": 1280,
+                "height": 720
+            }
+        },
+        "introduce": {
+            "title": "Engineering Knowledge, Explained Clearly",
+            "sub_title": "Circuitry is a modern blogging platform focused on electronics, circuits, and real-world engineering insights.",
+            "image": {
+                "src": "/pages/about/about_2.jpg",
+                "alt": "Engineering Knowledge, Explained Clearly",
+                "width": 1920,
+                "height": 640
+            }
+        },
+        "contact": {
+            "title": "Get In Touch",
+            "sub_title": "We’re always open to collaboration, feedback, and technical discussions.",
+            "contacts": [
+                {
+                    "svg_data": {
+                        "social_svg": "email_icon",
+                        "social_name": "Email Icon",
+                        "social_href": "/"
+                    },
+                    "contact_title": "Email",
+                    "contact_paragraph": "xxx@gmail.com"
+                },
+                {
+                    "svg_data": {
+                        "social_svg": "phone_icon",
+                        "social_name": "Phone Icon",
+                        "social_href": "/"
+                    },
+                    "contact_title": "Phone",
+                    "contact_paragraph": "(+84) 768-xxx-xxx"
+                },
+                {
+                    "svg_data": {
+                        "social_svg": "address_icon",
+                        "social_name": "Address Icon",
+                        "social_href": "/"
+                    },
+                    "contact_title": "Address",
+                    "contact_paragraph": "Vietnam - xxx"
+                }
+            ]
+        },
+        "story": {
+            "title": "The Story Behind Circuitry",
+            "paragraph": "Circuitry was created to simplify complex electronics concepts without sacrificing depth. We believe great engineering content should be both accurate and approachable.",
+            "button_content": "Read Our Journey",
+            "button_href": "/blog",
+            "image": {
+                "src": "/pages/about/about_3.jpg",
+                "alt": "The Story Behind Circuitry",
+                "width": 1000,
+                "height": 1000
+            }
+        },
+        "full_banner": {
+            "image": {
+                "src": "/pages/about/about_4.jpg",
+                "alt": "Circuitry — A Modern Technology & Electronics Blogging Platform",
+                "width": 1920,
+                "height": 640
+            },
+            "left_Title": "Circuitry — A Modern Technology & Electronics Blogging Platform",
+            "right_multiple_content": [
+                "Circuitry is a dedicated space for exploring electronics, hardware engineering, and modern technology through in-depth articles, practical guides, and real-world insights.",
+                "We focus on embedded systems, microcontrollers, and hardware design while connecting them with software, automation, and emerging digital technologies.",
+                "From beginner-friendly tutorials to advanced technical breakdowns, Circuitry helps readers understand how electronic systems are built, optimized, and evolved.",
+                "Our content highlights future technology trends, innovative product designs, and the engineering mindset behind tomorrow’s digital world."
+            ]
+        },
+        "parameter": {
+            "title": "Circuitry By The Numbers",
+            "parameters": [
+                {
+                    "parameter": "300+",
+                    "sub_content": "Technical Articles"
+                },
+                {
+                    "parameter": "50+",
+                    "sub_content": "Hardware Tutorials"
+                },
+                {
+                    "parameter": "10K+",
+                    "sub_content": "Monthly Readers"
+                },
+                {
+                    "parameter": "5+",
+                    "sub_content": "Years in Experience"
+                }
+            ]
+        }
+    },
+    "membership": {
+        "top": {
+            "sub_title": "Circuitry Membership",
+            "header": "Unlock Exclusive Tech Insights",
+            "paragraph": "Join the Circuitry membership to access premium content, in-depth reviews, and expert insights from the world of electronics and technology.",
+            "sub_paragraph": "Built for tech enthusiasts, makers, and professionals who want more than just surface-level blogs."
+        },
+        "sales": [
+            {
+                "sv_icon": {
+                    "social_svg": "access_icon",
+                    "social_name": "Premium Content",
+                    "social_href": "/"
+                },
+                "sales_string": "Access",
+                "sales_title": "Exclusive Articles",
+                "sale_sub_title": "Members Only",
+                "sales_paragraph": "Read deep-dive articles, teardown guides, and long-form analysis not available to free users.",
+                "sales_button_content": "View Articles"
+            },
+            {
+                "sv_icon": {
+                    "social_svg": "premium_icon",
+                    "social_name": "Community",
+                    "social_href": "/"
+                },
+                "sales_string": "Premium - 5.99$",
+                "sales_title": "Private Community",
+                "sale_sub_title": "Tech Experts",
+                "sales_paragraph": "Discuss electronics, gadgets, and future tech trends directly with authors and other members.",
+                "sales_button_content": "Join Community"
+            },
+            {
+                "sv_icon": {
+                    "social_svg": "ultra_icon",
+                    "social_name": "Updates",
+                    "social_href": "/"
+                },
+                "sales_string": "Ultra Premium - 12.99$",
+                "sales_title": "Early Access",
+                "sale_sub_title": "Before Everyone Else",
+                "sales_paragraph": "Get early access to upcoming articles, product comparisons, and technology reports.",
+                "sales_button_content": "Get Access"
+            }
+        ],
+        "slider": {
+            "sliders": [
+                {
+                    "image": {
+                        "src": "/pages/membership/membership_slider_1.jpg",
+                        "alt": "Deep analysis of emerging consumer electronics and accessories.",
+                        "width": 1920,
+                        "height": 640
+                    },
+                    "slider_content": "Deep analysis of emerging consumer electronics and accessories.",
+                    "slider_href": "/blog"
+                },
+                {
+                    "image": {
+                        "src": "/pages/membership/membership_slider_2.jpg",
+                        "alt": "Hands-on reviews written by engineers and tech specialists.",
+                        "width": 1920,
+                        "height": 640
+                    },
+                    "slider_content": "Hands-on reviews written by engineers and tech specialists.",
+                    "slider_href": "/blog"
+                },
+                {
+                    "image": {
+                        "src": "/pages/membership/membership_slider_3.jpg",
+                        "alt": "Well-researched buying guides for professionals and enthusiasts.",
+                        "width": 1920,
+                        "height": 640
+                    },
+                    "slider_content": "Well-researched buying guides for professionals and enthusiasts.",
+                    "slider_href": "/blog"
+                }
+            ],
+            "breadcrumb": [
+                {
+                    "title": "Home",
+                    "href": "/"
+                },
+                {
+                    "title": "Membership",
+                    "href": "/membership"
+                }
+            ]
+        },
+        "benefit": {
+            "title": "Why Become a Circuitry Member?",
+            "content": "Membership gives you more than content — it gives you clarity, depth, and confidence in technology decisions.",
+            "button_content": "Become a Member",
+            "button_href": "/",
+            "benefitItems": [
+                {
+                    "image": {
+                        "src": "/pages/membership/membership_benefit_1.jpg",
+                        "alt": "In-Depth Knowledge",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "benefit_title": "In-Depth Knowledge",
+                    "benefit_paragraph": "Go beyond surface-level blogs with technical explanations and real-world use cases.",
+                    "benefit_category": "Education"
+                },
+                {
+                    "image": {
+                        "src": "/pages/membership/membership_benefit_2.jpg",
+                        "alt": "Expert Perspective",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "benefit_title": "Expert Perspective",
+                    "benefit_paragraph": "Content curated and written by experienced tech writers and engineers.",
+                    "benefit_category": "Expertise"
+                },
+                {
+                    "image": {
+                        "src": "/pages/membership/membership_benefit_3.jpg",
+                        "alt": "Ad-Free Experience",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "benefit_title": "Ad-Free Experience",
+                    "benefit_paragraph": "Enjoy a clean, distraction-free reading experience across the entire Circuitry platform.",
+                    "benefit_category": "Experience"
+                },
+                {
+                    "image": {
+                        "src": "/pages/membership/membership_benefit_4.jpg",
+                        "alt": "Future-Proof Learning",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "benefit_title": "Future-Proof Learning",
+                    "benefit_paragraph": "Stay updated with trends in electronics, accessories, and emerging technologies.",
+                    "benefit_category": "Future"
+                }
+            ]
+        }
+    },
+    "terms": {
+        "breadcrumb": [
+            {
+                "title": "Home",
+                "href": "/"
+            },
+            {
+                "title": "Terms",
+                "href": "/terms"
+            }
+        ],
+        "sub_title": "Terms And Conditions",
+        "title": "Terms & Conditions of Circuitry",
+        "terms_and_conditions": [
+            {
+                "title": "Introduction",
+                "content": "Welcome to Circuitry. Circuitry is a modern blogging website theme designed for technology, electronics, and digital lifestyle content. By accessing, installing, or using this theme, you acknowledge that you have read, understood, and agreed to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should discontinue use of the theme immediately."
+            },
+            {
+                "title": "Theme License and Usage",
+                "content": "Circuitry is distributed exclusively through ThemeForest and is subject to Envato’s licensing terms. Upon purchase, you are granted a non-exclusive, non-transferable license to use the theme for personal or commercial projects as permitted by the selected license type. You may customize the theme to suit your project needs; however, you may not redistribute, resell, sublicense, or share the original or modified theme files."
+            },
+            {
+                "title": "Permitted and Prohibited Use",
+                "content": "You may use Circuitry to create blogs, content websites, or editorial platforms. You are strictly prohibited from using the theme in any manner that violates applicable laws, infringes intellectual property rights, or distributes malicious software. Using the theme for unlawful, harmful, or deceptive activities is not permitted."
+            },
+            {
+                "title": "Content Ownership and Responsibility",
+                "content": "All content published using the Circuitry theme, including text, images, videos, and external links, is solely the responsibility of the website owner. Circuitry does not verify, monitor, or endorse any user-generated content and shall not be held liable for content accuracy, legality, or ethical compliance."
+            },
+            {
+                "title": "Intellectual Property Rights",
+                "content": "All visual designs, layouts, UI components, source code, animations, and documentation included in Circuitry are protected by copyright and intellectual property laws. Ownership of these materials remains with the theme author. Unauthorized copying, distribution, or commercial exploitation of any part of the theme is strictly prohibited."
+            },
+            {
+                "title": "Third-Party Assets and Services",
+                "content": "Circuitry may include or recommend third-party assets such as fonts, icons, libraries, frameworks, or plugins. These third-party resources are governed by their respective licenses and terms. Users are responsible for reviewing and complying with the licenses of any third-party resources used within their projects."
+            },
+            {
+                "title": "Updates and Feature Changes",
+                "content": "Circuitry may receive updates that include bug fixes, performance improvements, design enhancements, or new features. Updates are provided at the discretion of the theme author and may modify or remove existing functionality. The author is not obligated to maintain backward compatibility with custom modifications made by users."
+            },
+            {
+                "title": "Support and Maintenance",
+                "content": "Support for Circuitry is provided in accordance with the support policy stated on the ThemeForest item page. Support includes assistance with reported bugs and theme-related issues but does not cover custom development, third-party integrations, or extensive design modifications."
+            },
+            {
+                "title": "No Warranty",
+                "content": "Circuitry is provided on an \"as is\" and \"as available\" basis without warranties of any kind, whether express or implied. This includes, but is not limited to, implied warranties of merchantability, fitness for a particular purpose, and non-infringement. Use of the theme is at your own risk."
+            },
+            {
+                "title": "Limitation of Liability",
+                "content": "Under no circumstances shall the Circuitry theme author be liable for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use the theme, including but not limited to data loss, business interruption, or financial loss."
+            },
+            {
+                "title": "Termination of License",
+                "content": "The author reserves the right to terminate your license to use Circuitry if you violate any part of these Terms and Conditions. Upon termination, you must cease all use of the theme and delete all copies in your possession. No refunds will be issued in cases of license termination due to violations."
+            },
+            {
+                "title": "Changes to Terms",
+                "content": "These Terms and Conditions may be updated or revised at any time without prior notice. Continued use of the Circuitry theme after changes are published constitutes acceptance of the revised terms. Users are encouraged to review this page periodically."
+            },
+            {
+                "title": "Governing Principles",
+                "content": "These Terms and Conditions are intended to be interpreted in a fair and reasonable manner, without reference to any specific jurisdiction. They are designed to protect both the theme author and end users while enabling flexible usage worldwide."
+            },
+            {
+                "title": "Contact Information",
+                "content": "If you have any questions, concerns, or requests regarding these Terms and Conditions, please contact the theme author through the official Circuitry item page on ThemeForest."
+            }
+        ]
+    },
+    "category": {
+        "image": {
+            "src": "/category/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg",
+            "alt": "Arnel Hasanovic",
+            "width": 1920,
+            "height": 640
+        },
+        "list": {
+            "title": "Category List",
+            "sub_title": "seeallblog",
+            "sub_title_href": "/blog"
+        },
+        "breadcrumb": [
+            {
+                "title": "Home",
+                "href": "/"
+            },
+            {
+                "title": "Categpry",
+                "href": "/category"
+            }
+        ]
+    },
+    "author": {
+        "image": {
+            "src": "/author/chris-spiegl-CSJPm2POibQ-unsplash.jpg",
+            "alt": "Chris Spiegl",
+            "width": 1920,
+            "height": 640
+        },
+        "list": {
+            "title": "Author List",
+            "sub_title": "seeallblog",
+            "sub_title_href": "/blog"
+        },
+        "breadcrumb": [
+            {
+                "title": "Home",
+                "href": "/"
+            },
+            {
+                "title": "Authors",
+                "href": "/author"
+            }
+        ]
+    },
+    "blog": {
+        "image": {
+            "src": "/blogs/blog.jpg",
+            "alt": "Blog Page",
+            "width": 1920,
+            "height": 640
+        },
+        "list": {
+            "title": "Aritcle List"
+        },
+        "breadcrumb": [
+            {
+                "title": "Home",
+                "href": "/"
+            },
+            {
+                "title": "Blog",
+                "href": "/blog"
+            }
+        ]
+    },
+    "footer": {
+        "footer_logo_src": "fabook_icon",
+        "footer_logo_text": "Circuitry",
+        "footer_logo_url": "/",
+        "footer_paragraph": "Circuitry is a modern blogging platform focused on technology, electronics, and the digital world.",
+        "footer_social_links": [
+            {
+                "social_svg": "facebook_icon",
+                "social_name": "Facebook",
+                "social_href": "/"
+            },
+            {
+                "social_svg": "instagram_icon",
+                "social_name": "Instagram",
+                "social_href": "/"
+            },
+            {
+                "social_svg": "github_icon",
+                "social_name": "GitHub",
+                "social_href": "/"
+            },
+            {
+                "social_svg": "youtube_icon",
+                "social_name": "Youtube",
+                "social_href": "/"
+            }
+        ],
+        "footer_button_content": "Back to top",
+        "footer_column_links": [
+            {
+                "name": "Product",
+                "href": "/",
+                "footer_column_list": [
+                    {
+                        "name": "Features",
+                        "href": "/"
+                    },
+                    {
+                        "name": "Pricing",
+                        "href": "/"
+                    },
+                    {
+                        "name": "Integrations",
+                        "href": "/"
+                    },
+                    {
+                        "name": "Changelog",
+                        "href": "/"
+                    }
+                ]
+            },
+            {
+                "name": "Resources",
+                "href": "/",
+                "footer_column_list": [
+                    {
+                        "name": "Documentation",
+                        "href": "/"
+                    },
+                    {
+                        "name": "Tutorials",
+                        "href": "/"
+                    },
+                    {
+                        "name": "Blog",
+                        "href": "/"
+                    },
+                    {
+                        "name": "Support",
+                        "href": "/"
+                    }
+                ]
+            },
+            {
+                "name": "Company",
+                "href": "/",
+                "footer_column_list": [
+                    {
+                        "name": "About",
+                        "href": "/"
+                    },
+                    {
+                        "name": "Careers",
+                        "href": "/"
+                    },
+                    {
+                        "name": "Contact",
+                        "href": "/"
+                    },
+                    {
+                        "name": "Partners",
+                        "href": "/"
+                    }
+                ]
+            }
+        ],
+        "footer_copyRight": "© 2026 Circuitry All Rigth Reversed",
+        "footer_term_links": [
+            {
+                "name": "Primary Policy",
+                "href": "/"
+            },
+            {
+                "name": "Terms of Service",
+                "href": "/"
+            },
+            {
+                "name": "Cookies Settings",
+                "href": "/"
+            }
+        ]
+    },
+    "changelog": {
+        "title": "Changelog",
+        "breadcrumb": [
+            {
+                "title": "Home",
+                "href": "/"
+            },
+            {
+                "title": "Changelog",
+                "href": "/changelog"
+            }
+        ],
+        "updates": [
+            {
+                "version": "1.0.0",
+                "date": "2026-01-10",
+                "changes": [
+                    {
+                        "title": "✨ Added",
+                        "contents": [
+                            "Initial release of the website",
+                            "Four homepage layouts",
+                            "Blog system with article listing and Article pages",
+                            "Category & tag filtering",
+                            "Responsive layout for desktop and mobile",
+                            "SEO metadata (title, description, Open Graph)",
+                            "Image optimization using next/image",
+                            "Dark-Light Mode",
+                            "Prev/Next Article",
+                            "Reading Time"
+                        ]
+                    },
+                    {
+                        "title": "🔧 Core Features",
+                        "contents": [
+                            "Next.js App Router setup",
+                            "Static data handling with JSON",
+                            "Data validation using the TypeScript satisfies operator",
+                            "Dynamic routing for articles (/blog/[id])",
+                            "Breadcrumb navigation"
+                        ]
+                    },
+                    {
+                        "title": "🎨 UI / UX",
+                        "contents": [
+                            "Clean and minimal design",
+                            "Mobile-friendly navigation",
+                            "Consistent typography and spacing"
+                        ]
+                    },
+                    {
+                        "title": "🚀 Performance",
+                        "contents": [
+                            "Fast page loading",
+                            "Optimized assets and Icon with React-Icon"
+                        ]
+                    },
+                    {
+                        "title": "🛡 Stability",
+                        "contents": [
+                            "Tested core flows (homepage, blog, article pages)",
+                            "Ready for production use"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

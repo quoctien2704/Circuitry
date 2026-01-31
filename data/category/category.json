@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "name": "Accessories",
+        "slug": "accessories",
+        "image": {
+            "src": "/category/accessories.jpg",
+            "alt": "This is Accessories category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/accessories"
+    },
+    {
+        "id": 2,
+        "name": "Audio",
+        "slug": "audio",
+        "image": {
+            "src": "/category/audio.jpg",
+            "alt": "This is Audio category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/audio"
+    },
+    {
+        "id": 3,
+        "name": "Technology",
+        "slug": "technology",
+        "image": {
+            "src": "/category/technology.jpg",
+            "alt": "This is Technology category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/technology"
+    },
+    {
+        "id": 4,
+        "name": "Computer",
+        "slug": "computer",
+        "image": {
+            "src": "/category/computer.jpg",
+            "alt": "This is Computer category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/computer"
+    },
+    {
+        "id": 5,
+        "name": "Tips",
+        "slug": "tips",
+        "image": {
+            "src": "/category/tips.jpg",
+            "alt": "This is Tips category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/tips"
+    },
+    {
+        "id": 6,
+        "name": "Mobile",
+        "slug": "mobile",
+        "image": {
+            "src": "/category/mobile.jpg",
+            "alt": "This is Mobile category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/mobile"
+    },
+    {
+        "id": 7,
+        "name": "Smart Home",
+        "slug": "smart-home",
+        "image": {
+            "src": "/category/smart-home.jpg",
+            "alt": "This is Smart Home category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/smart-home"
+    },
+    {
+        "id": 8,
+        "name": "Opinion",
+        "slug": "opinion",
+        "image": {
+            "src": "/category/opinion.jpg",
+            "alt": "This is Opinion category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/opinion"
+    },
+    {
+        "id": 9,
+        "name": "Trend",
+        "slug": "trend",
+        "image": {
+            "src": "/category/trend.jpg",
+            "alt": "This is Trend category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/trend"
+    },
+    {
+        "id": 10,
+        "name": "Guide",
+        "slug": "guide",
+        "image": {
+            "src": "/category/guide.jpg",
+            "alt": "This is Guide category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/guide"
+    },
+    {
+        "id": 11,
+        "name": "Work",
+        "slug": "work",
+        "image": {
+            "src": "/category/work.jpg",
+            "alt": "This is Work category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/work"
+    },
+    {
+        "id": 12,
+        "name": "Gift",
+        "slug": "gift",
+        "image": {
+            "src": "/category/gift.jpg",
+            "alt": "This is Gift category",
+            "width": 256,
+            "height": 256
+        },
+        "link": "/category/gift"
+    }
+]

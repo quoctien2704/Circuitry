@@ -1,0 +1,11 @@
+{
+  "colors": {
+    "primary": "#ff9671",
+    "secondary": "#845ec2",
+    "dark_primary": "#d9896c",
+    "dark_secondary": "#6c5394"
+  },
+  "config": {
+    "header_sticky": true
+  }
+}
