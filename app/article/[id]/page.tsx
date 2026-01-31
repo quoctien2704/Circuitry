@@ -129,9 +129,9 @@ export default async function Article({ params }: { params: { id: number } }) {
                                         <span>{article.published_at}</span>
                                     </time>
                                 </div>
-                                <div className="overflow-hidden rounded-4xl flex items-center justify-center">
+                                <div className="overflow-hidden rounded-2xl flex items-center justify-center">
                                     <Image
-                                        className="aspect-4/2 w-full hover:scale-110 transition-scale duration-300"
+                                        className="aspect-4/2 min-h-60 w-full hover:scale-110 transition-scale duration-300"
                                         src={article.image_src}
                                         alt={article.title}
                                         width={1200}

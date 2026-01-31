@@ -11,7 +11,7 @@ export function AboutParameterContent() {
     return (
         <section className="my-20 max-md:my-10">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col gap-10">
+                <div className="flex flex-col gap-10 max-lg:gap-4">
                     {/* Section Title */}
                     <h2 className="text-5xl max-md:text-2xl font-serif italic">
                         {aboutData.parameter.title || 'Our Statistics'}

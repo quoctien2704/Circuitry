@@ -40,7 +40,7 @@ export default function Terms() {
             {/* Secondary Breadcrumb for deep-level navigation */}
             <BreadCrumbSecond data={termsData.breadcrumb} />
 
-            <div className="container mx-auto px-4 mt-10">
+            <div className="container mx-auto px-4 mt-10 max-lg:mt-4">
                 {/* Header Section: Main Title and Subtitle */}
                 <div className="flex flex-col items-start justify-center gap-2">
                     <span className="text-gray-600 dark:text-gray-300">
@@ -50,7 +50,7 @@ export default function Terms() {
                         {termsData.title || 'Terms & Conditions'}
                     </h3>
 
-                    <hr className="h-1 w-full my-20 max-lg:my-10 border-gray-300 dark:border-gray-700"></hr>
+                    <hr className="h-1 w-full my-20 max-lg:my-4 border-gray-300 dark:border-gray-700"></hr>
                 </div>
 
                 {/* Terms and Conditions Content List */}

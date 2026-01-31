@@ -57,11 +57,11 @@ export default function Changelog() {
 
             <div className="container mx-auto px-4">
                 {/* Header Section: Main Title and Divider */}
-                <div className="flex flex-col items-start justify-center gap-2 mt-10">
+                <div className="flex flex-col items-start justify-center gap-2 mt-10 max-lg:mt-4">
                     <h3 className="text-5xl max-md:text-3xl font-medium italic font-serif">
                         {changelogData.title || 'Product Changelog'}
                     </h3>
-                    <hr className="h-1 w-full my-20 max-lg:my-10 border-gray-300 dark:border-gray-700"></hr>
+                    <hr className="h-1 w-full my-20 max-lg:my-4 border-gray-300 dark:border-gray-700"></hr>
                 </div>
 
                 {/* Main Updates List */}

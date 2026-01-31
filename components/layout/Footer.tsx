@@ -28,7 +28,7 @@ export default function Footer() {
     } = footerData || {};
 
     return (
-        <footer className="border-t border-gray-200 dark:border-gray-800 py-20" aria-label="Site Footer">
+        <footer className="border-t border-gray-200 dark:border-gray-800 py-20 max-lg:py-10" aria-label="Site Footer">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col gap-10">
                     <div className="flex items-start justify-between max-lg:flex-col">

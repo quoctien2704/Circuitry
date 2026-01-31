@@ -17,7 +17,7 @@ export function AboutStoryContent() {
         <section className="my-20 max-md:my-10">
             <div className="container mx-auto px-4">
                 <div className="
-                    flex overflow-hidden rounded-4xl
+                    flex overflow-hidden rounded-2xl
                     max-lg:flex-col-reverse
                 ">
                     {/* Narrative Text Column */}

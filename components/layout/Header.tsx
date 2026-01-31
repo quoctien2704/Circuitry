@@ -39,7 +39,7 @@ export default function Header() {
                     <ul className={`
                         header_nav_links flex items-center justify-center gap-8 h-full 
                         max-xl:overflow-y-auto max-2xl:gap-4
-                        ${!openMenu ? "max-xl:-left-70" : "max-xl:left-0"} max-xl:transtiion-left max-xl:duration-600 max-xl:border-r max-xl:border-r-gray-200 dark:max-xl:border-r-gray-800 max-xl:fixed max-xl:top-0 max-xl:flex-col  max-xl:gap-4 max-xl:items-start max-xl:justify-start max-xl:bg-white dark:max-xl:bg-[hsl(225,40%,5%)] max-xl:z-20 max-xl:w-70 max-xl:p-10
+                        ${!openMenu ? "max-xl:-left-60" : "max-xl:left-0"} max-xl:transtiion-left max-xl:duration-600 max-xl:border-r max-xl:border-r-gray-200 dark:max-xl:border-r-gray-800 max-xl:fixed max-xl:top-0 max-xl:flex-col  max-xl:gap-4 max-xl:items-start max-xl:justify-start max-xl:bg-white dark:max-xl:bg-[hsl(225,40%,5%)] max-xl:z-20 max-xl:w-60 max-xl:p-10
                     `}>
                         <li className="mb-10 cursor-pointer xl:hidden" onClick={() => setOpenMenu(false)}>
                             <TfiClose size={30} />
@@ -81,7 +81,7 @@ export default function Header() {
                             }
 
                             {/* Header Tiitle */}
-                            <h2 className="text-3xl font-bold">
+                            <h2 className="text-3xl max-lg:text-2xl font-bold">
                                 {headerData.header_text}
                             </h2>
                         </Link>

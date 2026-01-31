@@ -38,8 +38,8 @@ export function AboutContactContent() {
                     {/* Contact Methods List */}
                     {aboutData.contact.contacts.length > 0 && (
                         <ul className="
-                            grid grid-cols-3 gap-10 mt-18 w-full
-                            max-lg:flex max-lg:flex-col max-lg:gap-4 max-lg:mt-8
+                            grid grid-cols-3 gap-10 mt-12 w-full
+                            max-lg:flex max-lg:flex-col max-lg:gap-4 max-lg:mt-2
                         ">
                             {aboutData.contact.contacts.map((contact, index) => (
                                 <li className="w-full" key={contact.contact_title || index}>

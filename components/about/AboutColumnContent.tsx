@@ -20,8 +20,8 @@ export function AboutColumnContent() {
                     max-lg:flex-col
                 ">
                     {/* Visual Content Column (Left on Desktop) */}
-                    <div className="flex-3 lg:p-10 lg:pl-0 max-lg:pb-10">
-                        <div className="overflow-hidden rounded-4xl flex items-center justify-center">
+                    <div className="flex-3 lg:p-10 lg:pl-0 max-lg:pb-4">
+                        <div className="overflow-hidden rounded-2xl flex items-center justify-center">
                             <Image
                                 className="w-full aspect-3/2 object-cover hover:scale-105 transition-all duration-300"
                                 loading="eager"
@@ -34,7 +34,7 @@ export function AboutColumnContent() {
                     </div>
 
                     {/* Text Content Column (Right on Desktop) */}
-                    <div className="flex-2 flex flex-col justify-between lg:items-end gap-4 lg:p-10 lg:border-l border-gray-200 dark:border-gray-800">
+                    <div className="flex-2 flex flex-col justify-between lg:items-end gap-4 max-lg:gap-2 lg:p-10 lg:border-l border-gray-200 dark:border-gray-800">
                         {/* Sub-title Link */}
                         <Link
                             aria-label={`Read more about: ${aboutData.column.sub_title || 'this section'}`}

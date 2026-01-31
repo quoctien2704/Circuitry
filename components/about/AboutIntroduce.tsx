@@ -35,8 +35,8 @@ export function AboutIntroduce() {
 
                     {/* Featured Image Container with Smooth Interaction */}
                     <div className="
-                        w-full my-18 overflow-hidden rounded-4xl flex items-center justify-center
-                        max-lg:my-0 max-lg:mt-8
+                        w-full my-18 overflow-hidden rounded-2xl flex items-center justify-center
+                        max-lg:my-0 max-lg:mt-4
                     ">
                         <div className="overflow-hidden w-full">
                             <Image

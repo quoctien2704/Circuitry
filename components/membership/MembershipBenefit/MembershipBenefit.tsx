@@ -47,13 +47,13 @@ export function MembershipBenefit() {
 
                     {/* Swiper Slider */}
                     {benefitItems.length > 0 && (
-                        <div className="w-full mt-10 max-lg:mt-4" role="region" aria-label="Benefits Carousel">
+                        <div className="w-full lg:mt-10" role="region" aria-label="Benefits Carousel">
                             <Swiper
-                                slidesPerView={1}
+                                slidesPerView={1.5}
                                 spaceBetween={30}
                                 breakpoints={{
-                                    480: { slidesPerView: 2 },
-                                    1024: { slidesPerView: 3 },
+                                    640: { slidesPerView: 2.5 },
+                                    1024: { slidesPerView: 3.5 },
                                     1280: { slidesPerView: 4 },
                                 }}
                                 className="mySwiper w-full invisible opacity-0 max-h-160 transition-all duration-300 [&.swiper-initialized]:visible [&.swiper-initialized]:opacity-100 [&.swiper-initialized]:max-h-full"

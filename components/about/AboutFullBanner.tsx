@@ -28,7 +28,7 @@ export function AboutFullBanner() {
                 <div className="
                     flex gap-20 mt-20 
                     max-lg:mt-10
-                    max-md:flex-col max-md:gap-10
+                    max-md:flex-col max-md:gap-4
                 ">
                     {/* Left Column: Main Narrative Title */}
                     <div className="flex-1">
