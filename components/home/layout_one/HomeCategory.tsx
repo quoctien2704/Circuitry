@@ -28,10 +28,11 @@ export function HomeCategory() {
                 {categorys && categorys.length > 0 && (
                     <ul className="
                         flex gap-10 items-center flex-wrap
-                        max-sm:gap-4 justify-center
+                        max-xl:gap-6 justify-center
+                        max-sm:gap-4 
                     ">
                         {categorys.slice(0, 6).map((category: CategoryData) => (
-                            <li className="w-40 max-lg:w-35" key={category.name}>
+                            <li className="w-40 max-lg:w-35 max-sm:w-30" key={category.name}>
                                 <CategoryItem categoryData={category} />
                             </li>
                         ))}

@@ -24,11 +24,11 @@ export function HomeLastestBlog() {
             aria-labelledby="latest-blog-header"
         >
             <div className="container mx-auto px-4">
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-10">
                     {/* ID linked to section's aria-labelledby for screen readers */}
                     <h2
                         id="latest-blog-header"
-                        className="text-6xl italic font-serif mb-6"
+                        className="text-6xl italic font-serif"
                     >
                         {latestData.header || 'Latest from our Blog'}
                     </h2>
@@ -38,9 +38,9 @@ export function HomeLastestBlog() {
 
                     {/* Secondary Articles Grid */}
                     {subItem.length > 0 && (
-                        <div className="flex lg:mt-6 gap-4 max-md:flex-col" role="list" aria-label="More recent articles">
+                        <div className="grid grid-cols-3 lg:mt-6 gap-4 max-md:flex max-md:flex-col" role="list" aria-label="More recent articles">
                             {subItem.map((blog, index) => (
-                                <div key={blog.id || index} role="listitem" className="flex-1">
+                                <div key={blog.id || index} role="listitem">
                                     <ExtraMainLatestBlog article={blog} />
                                 </div>
                             ))}

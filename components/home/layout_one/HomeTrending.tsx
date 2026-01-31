@@ -25,10 +25,10 @@ export function HomeTrending() {
     return (
         <section className="my-20" aria-labelledby="trending-heading">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col gap-10">
+                <div className="flex flex-col gap-10 max-md:gap-6">
                     <h2
                         id="trending-heading"
-                        className="text-6xl font-medium italic font-serif"
+                        className="text-6xl max-lg:text-6xl font-medium italic font-serif"
                     >
                         {trendData.header || 'Trending Now'}
                     </h2>
@@ -47,8 +47,8 @@ export function HomeTrending() {
                             spaceBetween={30}
                             breakpoints={{
                                 640: { slidesPerView: 2.5 },
-                                768: { slidesPerView: 3.5 },
-                                1024: { slidesPerView: 4.5 },
+                                1024: { slidesPerView: 3.5 },
+                                1280: { slidesPerView: 4.5 },
                             }}
                             /* CSS logic to handle smooth loading and prevent CLS */
                             className="mySwiper w-full invisible opacity-0 max-h-160 transition-all duration-300 [&.swiper-initialized]:visible [&.swiper-initialized]:opacity-100 [&.swiper-initialized]:max-h-full"

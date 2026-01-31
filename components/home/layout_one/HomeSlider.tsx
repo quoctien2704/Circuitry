@@ -36,13 +36,14 @@ export function HomeSlider() {
             <div className="container mx-auto px-4">
                 <div className="
                         flex gap-10 items-end 
-                        max-xl:flex-col-reverse max-xl:items-center max-xl:justify-center max-xl:gap-10
+                        max-xl:flex-col-reverse max-xl:items-center max-xl:justify-center max-xl:gap-6
+                        max-md:gap-4
                     ">
                     <div className="
                         xl:w-[27%] xl:flex-col xl:max-w-90  
                         flex gap-10 w-full
-                        max-xl:grid max-xl:grid-cols-2 max-xl:gap-10
-                        max-md:grid-cols-1
+                        max-xl:grid max-xl:grid-cols-2 max-xl:gap-6
+                        max-md:grid-cols-1 max-md:gap-4
                     ">
                         <div className="
                             relative p-8 flex flex-col gap-4 bg-blue-200 dark:bg-cyan-950 rounded-4xl md:aspect-square

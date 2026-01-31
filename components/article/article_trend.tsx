@@ -43,7 +43,7 @@ export function ArticleTrend({ article }: { article: ArticleData }) {
                 {/* Content Details Layer */}
                 <div className="flex gap-2 flex-col items-start px-2 h-full">
                     {/* Meta Row: Author and Date */}
-                    <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center gap-1 justify-between w-full flex-wrap">
                         <Link
                             aria-label={`Click this to go to ${article.title || 'this'} page`}
                             className="text-gray-600 dark:text-white hover:text-primary font-medium max-md:text-sm"
@@ -51,18 +51,18 @@ export function ArticleTrend({ article }: { article: ArticleData }) {
                         >
                             <span>{article.author || 'No author available'}</span>
                         </Link>
-                        <span className="font-medium max-md:text-sm dark:text-white">
+                        <span className="font-medium max-md:text-sm text-gray-600 dark:text-white">
                             {article.published_at || 'No date available'}
                         </span>
                     </div>
 
                     {/* Trending Title */}
-                    <p className="text-gray-600 dark:text-white text-xl italic max-xl:text-base">
+                    <p className="text-gray-600 dark:text-white xl:text-xl italic sm:text-base max-sm:text-sm">
                         {article.title || 'No title available'}
                     </p>
 
                     {/* Category CTA Button */}
-                    <Link aria-label={`Click this link to go to ${article.category || 'this category'} page`} href={`/category/${(article.category || 'general').toLowerCase()}`} className="mt-4">
+                    <Link aria-label={`Click this link to go to ${article.category || 'this category'} page`} href={`/category/${(article.category || 'general').toLowerCase()}`} className="mt-2">
                         <PrimaryButton content={article.category || 'No category available'} />
                     </Link>
                 </div>

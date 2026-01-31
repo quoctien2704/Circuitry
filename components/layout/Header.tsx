@@ -34,14 +34,14 @@ export default function Header() {
     return (
         <header className={`${theme.config.header_sticky ? "fixed" : "absolute"} top-0 w-screen z-15 border-b border-b-gray-200 bg-white dark:bg-[hsl(225,40%,5%)] dark:border-gray-800`}>
 
-            <div className="relative container mx-auto px-4 lg:px-2">
+            <div className="relative container mx-auto px-4">
                 <div className="flex items-center justify-between gap-8 h-19.5">
                     <ul className={`
-                        header_nav_links flex items-center justify-center gap-10 h-full 
-                        max-lg:overflow-y-auto
-                        ${!openMenu ? "max-lg:-left-70" : "max-lg:left-0"} max-lg:transtiion-left max-lg:duration-600 max-lg:border-r max-lg:border-r-gray-200 dark:max-lg:border-r-gray-800 max-lg:fixed max-lg:top-0 max-lg:flex-col max-xl:gap-6 max-lg:gap-4 max-lg:items-start max-lg:justify-start max-lg:bg-white dark:max-lg:bg-[hsl(225,40%,5%)] max-lg:z-20 max-lg:w-70 max-lg:p-10
+                        header_nav_links flex items-center justify-center gap-8 h-full 
+                        max-xl:overflow-y-auto max-2xl:gap-4
+                        ${!openMenu ? "max-xl:-left-70" : "max-xl:left-0"} max-xl:transtiion-left max-xl:duration-600 max-xl:border-r max-xl:border-r-gray-200 dark:max-xl:border-r-gray-800 max-xl:fixed max-xl:top-0 max-xl:flex-col  max-xl:gap-4 max-xl:items-start max-xl:justify-start max-xl:bg-white dark:max-xl:bg-[hsl(225,40%,5%)] max-xl:z-20 max-xl:w-70 max-xl:p-10
                     `}>
-                        <li className="mb-10 cursor-pointer lg:hidden" onClick={() => setOpenMenu(false)}>
+                        <li className="mb-10 cursor-pointer xl:hidden" onClick={() => setOpenMenu(false)}>
                             <TfiClose size={30} />
                         </li>
 
@@ -49,14 +49,14 @@ export default function Header() {
                             <li
                                 key={link.name}
                                 className="
-                                lg:h-full flex items-center group
+                                xl:h-full flex items-center group
                             ">
 
                                 {/* -- Link -- */}
                                 {link.href && (
 
                                     <Link className="group-hover:text-primary outline-none" href={link.href}>
-                                        <span className="text-xl max-lg:text-left font-medium">{link.name}</span>
+                                        <span className="text-xl max-xl:text-left font-medium">{link.name}</span>
                                     </Link>
                                 )}
 
@@ -65,14 +65,14 @@ export default function Header() {
                                 )}
                             </li>
                         ))}
-                        <li className="mt-auto lg:hidden">
+                        <li className="mt-auto xl:hidden">
                             <SearchBar search_placeholder={headerData.searchbar_placeholder} />
                         </li>
                     </ul>
-                    <div className="max-lg:hidden">
+                    <div className="max-xl:hidden">
                         <SearchBar search_placeholder={headerData.searchbar_placeholder} />
                     </div>
-                    <div className="flex gap-2 max-lg:gap-4">
+                    <div className="flex gap-2 max-xl:gap-4">
                         <DarkLightMode />
                         <Link href={headerData.header_url} className="header_logo_title flex items-center justify-center gap-2 hover:text-primary">
                             {/* Header Logo */}
@@ -88,7 +88,7 @@ export default function Header() {
 
                     </div>
                     <div
-                        className="lg:hidden cursor-pointer"
+                        className="xl:hidden cursor-pointer"
                         onClick={() => setOpenMenu(prev => !prev)}
                     >
                         {!openMenu ? <IoMdMenu size={28} /> : <TfiClose size={24} />}

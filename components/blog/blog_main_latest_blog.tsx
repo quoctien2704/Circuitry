@@ -103,9 +103,9 @@ export function ExtraMainLatestBlog({ article }: { article: ArticleData }) {
                 className="flex-1 group overflow-hidden rounded-lg block"
                 aria-label={`Read the full article: ${article.title || 'View Post'}`}
             >
-                <div className="overflow-hidden">
+                <div className="overflow-hidden h-full">
                     <Image
-                        className="w-full h-full aspect-square object-cover group-hover:scale-110 transition-transform duration-300"
+                        className="w-full h-full object-cover aspect-square group-hover:scale-110 transition-transform duration-300"
                         src={article.image_src || '/empty_image.webp'}
                         alt={article.title || 'Blog post thumbnail'}
                         width={600}
@@ -144,18 +144,18 @@ export function ExtraMainLatestBlog({ article }: { article: ArticleData }) {
 
                 {/* Post Footer Metadata */}
                 <footer className="
-                    flex gap-1 items-center text-sm text-gray-500 dark:text-gray-400 flex-wrap
+                    flex gap-1 items-center text-sm text-gray-500 dark:text-gray-400
                     max-lg:mt-8
                 ">
                     <Link
-                        className="hover:text-primary transition-colors font-bold"
+                        className="hover:text-primary transition-colors font-bold text-nowrap"
                         href={`/author/${article.author_id || ''}`}
                         aria-label={`Articles by ${article.author}`}
                     >
                         {article.author || 'Author'}
                     </Link>
                     <GoDotFill className="text-[8px] mx-1" aria-hidden="true" />
-                    <time dateTime={article.published_at}>
+                    <time className="text-nowrap" dateTime={article.published_at}>
                         {article.published_at || 'Recent'}
                     </time>
                 </footer>
