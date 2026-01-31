@@ -45,15 +45,15 @@ export function HomeBannerTwo() {
                             {/* Decorative Overlay */}
                             <div className="absolute inset-0 bg-black opacity-50 pointer-events-none" aria-hidden="true"></div>
 
-                            <div className="absolute inset-0 p-8 flex flex-col justify-center gap-2 max-xl:items-center max-xl:gap-4 max-xl:p-4">
+                            <div className="absolute inset-0 p-8 flex flex-col justify-center gap-2 max-xl:items-center max-xl:gap-4 max-md:gap-2 max-xl:p-4">
                                 <span className="bg-white px-6 py-2 w-fit text-black font-bold text-lg xl:mt-auto rounded-2xl max-xl:px-4">
                                     {leftTopArticle.category}
                                 </span>
                                 <h3 className="text-white text-3xl font-bold max-xl:text-center max-sm:text-lg xl:mt-2">
-                                    {leftTopArticle.title}
+                                    {leftTopArticle.title || "No title available"}
                                 </h3>
                                 <p className="text-white text-xl max-xl:text-center max-sm:text-base line-clamp-2">
-                                    {leftTopArticle.content}
+                                    {leftTopArticle.content || 'No content available'}
                                 </p>
                                 <div className="xl:mt-auto max-xl:mt-4">
                                     <PrimaryButton content="Booking Now" />
@@ -77,7 +77,7 @@ export function HomeBannerTwo() {
                                 height={400}
                             />
                             <div className="absolute inset-0 bg-black opacity-50 pointer-events-none" aria-hidden="true"></div>
-                            <div className="absolute inset-0 p-8 flex flex-col justify-center gap-4 max-xl:items-center max-xl:p-4">
+                            <div className="absolute inset-0 p-8 flex flex-col justify-center gap-4 max-md:gap-2 max-xl:items-center max-xl:p-4">
                                 <span className="bg-white px-6 py-2 w-fit text-black font-bold text-lg xl:mt-auto rounded-2xl">
                                     {leftBottomArticle.category}
                                 </span>
@@ -96,7 +96,7 @@ export function HomeBannerTwo() {
                 </div>
 
                 {/* Right Column: Main Highlight */}
-                <div className="flex-3 min-h-full relative group overflow-hidden xl:rounded-l-xl">
+                <div className="flex-4 min-h-full relative group overflow-hidden xl:rounded-l-xl">
                     <Link
                         href={`/article/${rightArticle.id}`}
                         className="block h-full w-full"
@@ -112,7 +112,7 @@ export function HomeBannerTwo() {
                         <div className="absolute inset-0 bg-black opacity-40 pointer-events-none" aria-hidden="true"></div>
                         <div className="absolute inset-0 p-8 max-xl:p-4 flex flex-col items-center justify-center gap-4">
                             <h2 className="text-white text-5xl max-xl:text-3xl font-bold text-center">
-                                {rightArticle.title}
+                                {rightArticle.title || 'No title available'}
                             </h2>
                         </div>
                     </Link>

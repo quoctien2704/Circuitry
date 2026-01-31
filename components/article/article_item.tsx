@@ -168,7 +168,7 @@ export function ArtcileGralleryItem({ article }: { article: ArticleData }) {
                     aria-label={`Click this to go to ${author?.name || "this author"} page`}
                     title={author?.name}
                     href={`author/${author?.id}`}
-                    className="hover:scale-125 transition-all duration-300 relative w-12 aspect-square rounded-full overflow-hidden border-2 border-white"
+                    className="hover:scale-125 transition-all duration-300 relative w-16 max-xl:w-12 aspect-square rounded-full overflow-hidden border-2 border-white"
                 >
                     <Image
                         className="w-full aspect-square object-cover"

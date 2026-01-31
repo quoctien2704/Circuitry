@@ -19,7 +19,7 @@ export function HomeSubscribeThree() {
     return (
         <section className="mt-20 py-20" aria-labelledby="subscribe-three-title">
             {/* Fixed typo: "gray-100dark" to "gray-100 dark" */}
-            <div className="container mx-auto px-4 bg-gray-100 dark:bg-[hsl(225,40%,5%)] rounded-3xl overflow-hidden">
+            <div className="container mx-auto p-4 bg-gray-100 dark:bg-[hsl(225,40%,5%)] rounded-3xl overflow-hidden">
                 <div className='flex max-lg:flex-col items-center'>
                     {/* Image Column */}
                     <div className='flex-1 w-full'>

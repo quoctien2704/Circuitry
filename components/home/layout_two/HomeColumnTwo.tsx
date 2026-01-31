@@ -20,7 +20,7 @@ export function HomeColumnTwo() {
     return (
         <section className="my-40 max-lg:my-20" aria-label="Featured content grid">
             <div className="container mx-auto px-4">
-                <div className="flex gap-4 max-xl:gap-8 max-xl:flex-col-reverse">
+                <div className="flex gap-4 max-xl:gap-4 max-xl:flex-col-reverse">
 
                     {/* Left Column: Grid of Small Articles */}
                     <div className="flex-1">

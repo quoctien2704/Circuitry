@@ -19,7 +19,7 @@ export function HomeLatestBigItemTwo({ article }: { article: ArticleData }) {
             {/* Image Link */}
             <Link
                 href={`/article/${article.id}`}
-                className="overflow-hidden block aspect-square md:h-132"
+                className="overflow-hidden block aspect-square xl:h-132"
                 aria-label={`Read more about ${article.title}`}
             >
                 <Image

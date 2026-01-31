@@ -21,16 +21,16 @@ export function HomeGallery() {
 
                     {/* Stylized Header Group */}
                     <div className="flex flex-col items-center justify-center text-center">
-                        <span className="text-5xl max-lg:text-2xl text-secondary font-bold block">
+                        <span className="text-5xl max-lg:text-3xl text-secondary font-bold block">
                             {galleryData.title?.top}
                         </span>
                         <h2
                             id="gallery-main-title"
-                            className="text-6xl max-lg:text-3xl -mt-4 font-bold bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(0,0,0,0.25)] shadow-lg py-2 px-10 relative z-3 text-primary uppercase tracking-tight"
+                            className="text-6xl max-lg:text-4xl -mt-4 font-bold bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(0,0,0,0.25)] shadow-lg py-2 px-10 relative z-3 text-primary uppercase tracking-tight"
                         >
                             {galleryData.title?.mid}
                         </h2>
-                        <span className="text-5xl max-lg:text-2xl -mt-4 text-secondary font-bold block">
+                        <span className="text-5xl max-lg:text-3xl -mt-4 text-secondary font-bold block">
                             {galleryData.title?.bottom}
                         </span>
                     </div>

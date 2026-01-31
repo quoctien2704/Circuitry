@@ -28,18 +28,18 @@ export function HomeSliderItemTwo({ article }: { article: ArticleData }) {
                 <Image
                     loading="eager"
                     priority={true}
-                    className="aspect-7/3 object-cover max-lg:aspect-square min-h-75 w-full"
+                    className=" aspect-7/3 object-cover max-lg:aspect-square min-h-150 max-h-200 w-full"
                     src={article.image_src || '/placeholder-hero.jpg'}
                     alt={article.title}
                     width={1920}
                     height={1280}
                 />
             </div>
-
+            <div className="absolute w-full h-full bg-black left-0 top-0 opacity-30"></div>
             {/* Content Overlay */}
             <div className="absolute inset-0 z-10 flex flex-col justify-end pb-16 max-lg:justify-center max-lg:pb-0">
                 <div className="container mx-auto px-4">
-                    <div className="flex gap-10 items-end max-lg:flex-col max-lg:items-center max-lg:gap-6">
+                    <div className="flex gap-10 items-end max-lg:flex-col max-lg:items-center max-lg:gap-4">
 
                         {/* Article Info Section */}
                         <div className="flex-6 flex flex-col gap-6 max-lg:items-center max-lg:text-center max-lg:gap-4">
@@ -53,7 +53,7 @@ export function HomeSliderItemTwo({ article }: { article: ArticleData }) {
 
                             {/* Semantic H2 for Hero Slider Titles */}
                             <Link href={`/article/${article.id}`} className="hover:text-primary transition-colors">
-                                <h2 className="text-white text-6xl font-bold leading-tight max-lg:text-3xl line-clamp-2">
+                                <h2 className="text-white text-5xl font-bold leading-tight max-lg:text-2xl line-clamp-2">
                                     {article.title}
                                 </h2>
                             </Link>
@@ -86,7 +86,7 @@ export function HomeSliderItemTwo({ article }: { article: ArticleData }) {
                                     </div>
                                 </Link>
 
-                                <div className="flex gap-3 font-medium items-center text-gray-300 text-sm">
+                                <div className="flex gap-3 font-medium items-center text-gray-300 text-base">
                                     <time dateTime={article.published_at}>{article.published_at}</time>
                                     <GoDotFill className="text-primary" size={10} aria-hidden="true" />
                                     <span>{readingMinutes} mins read</span>

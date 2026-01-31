@@ -48,8 +48,8 @@ export function HomePopularCategory() {
                             spaceBetween={30}
                             breakpoints={{
                                 640: { slidesPerView: 2.5 },
-                                768: { slidesPerView: 3.5 },
-                                1024: { slidesPerView: 4.5 },
+                                1024: { slidesPerView: 3.5 },
+                                1280: { slidesPerView: 4.5 },
                             }}
                             /* Prevents layout jumping before Swiper initializes */
                             className="mySwiper w-full invisible opacity-0 max-h-160 transition-all duration-300 [&.swiper-initialized]:visible [&.swiper-initialized]:opacity-100 [&.swiper-initialized]:max-h-full"
@@ -119,7 +119,7 @@ export function HomePopularCategoryArticleItem({ article }: { article: ArticleDa
             </Link>
 
             <div className="flex flex-col gap-2 p-4 grow">
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center flex-wrap gap-x-4">
                     {/* Category Link */}
                     <Link
                         className="group focus-visible:outline-primary"

@@ -51,10 +51,10 @@ export function HomeBlogItemTwo({ article }: { article: ArticleData }) {
             <div className="flex flex-col gap-4 max-lg:gap-2 flex-1">
                 <div className="flex flex-col gap-2">
                     {/* Metadata */}
-                    <div className="flex gap-2 items-center text-sm text-gray-600 dark:text-gray-300 font-medium">
-                        <time dateTime={article.published_at}>{article.published_at}</time>
+                    <div className="flex flex-nowrap gap-2 items-center text-sm text-gray-600 dark:text-gray-300 font-medium">
+                        <time className="text-nowrap max-sm:text-sm" dateTime={article.published_at}>{article.published_at}</time>
                         <GoDotFill size={10} className="opacity-50" aria-hidden="true" />
-                        <span>{readingTime} mins read</span>
+                        <span className="text-nowrap max-sm:text-sm">{readingTime} mins read</span>
                     </div>
 
                     {/* Title & Excerpt */}

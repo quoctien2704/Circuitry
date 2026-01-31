@@ -52,7 +52,7 @@ export function HomeFeaturedGrid() {
                                         {/* Large Article Card (flex-5) */}
                                         <Link
                                             href={`/article/${firstArticle.id}`}
-                                            className="group overflow-hidden flex-5 relative flex items-center justify-center focus-visible:ring-2 focus-visible:ring-primary"
+                                            className="group max-lg:rounded-2xl overflow-hidden flex-5 relative flex items-center justify-center focus-visible:ring-2 focus-visible:ring-primary"
                                             aria-label={`Read featured story: ${firstArticle.title}`}
                                         >
                                             <div className="lg:h-full max-lg:h-100 w-full overflow-hidden">
@@ -74,7 +74,7 @@ export function HomeFeaturedGrid() {
                                         {/* Small Article Card (flex-2) */}
                                         <Link
                                             href={`/article/${secondArticle.id}`}
-                                            className="group overflow-hidden flex-2 relative flex items-center justify-center focus-visible:ring-2 focus-visible:ring-primary"
+                                            className="group max-lg:rounded-2xl overflow-hidden flex-2 relative flex items-center justify-center focus-visible:ring-2 focus-visible:ring-primary"
                                             aria-label={`View article: ${secondArticle.title}`}
                                         >
                                             <div className="lg:h-full max-lg:h-100 w-full overflow-hidden">

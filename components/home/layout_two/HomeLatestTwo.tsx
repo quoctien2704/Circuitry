@@ -24,7 +24,7 @@ export function HomeLatestTwo() {
     return (
         <section className="my-40 max-lg:my-20" aria-label="Latest Articles">
             <div className="container mx-auto px-4">
-                <div className="flex gap-4 max-lg:flex-col">
+                <div className="flex gap-4 max-xl:flex-col">
                     {/* Primary Highlighted Article */}
                     <div>
                         {big_article && (

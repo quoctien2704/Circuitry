@@ -40,7 +40,7 @@ export function HomeBigItemTwo({ article }: { article: ArticleData }) {
                 <div className="flex flex-col gap-4 max-lg:gap-2">
 
                     {/* Metadata Row - Using pointer-auto to make category clickable independently */}
-                    <div className="flex gap-2 items-center font-medium text-white text-xl pointer-events-auto">
+                    <div className="flex gap-2 items-center font-medium text-white text-xl max-md:text-base max-sm:text-sm pointer-events-auto">
                         <Link
                             href={`/category/${article.category}`}
                             className="hover:text-primary transition-colors relative z-3"
@@ -52,7 +52,7 @@ export function HomeBigItemTwo({ article }: { article: ArticleData }) {
                     </div>
 
                     {/* Article Title - Semantic h3 for better SEO hierarchy */}
-                    <h3 className="text-white font-medium font-serif text-4xl max-lg:text-2xl line-clamp-3 leading-tight">
+                    <h3 className="text-white font-medium font-serif text-4xl max-md:text-2xl max-sm:text-base line-clamp-3 leading-tight">
                         {article.title}
                     </h3>
                 </div>

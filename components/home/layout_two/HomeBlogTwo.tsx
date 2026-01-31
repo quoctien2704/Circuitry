@@ -24,7 +24,7 @@ export function HomeBlogTwo() {
             aria-labelledby="blog-two-title"
         >
             <div className="container mx-auto px-4">
-                <div className="flex flex-col gap-10">
+                <div className="flex flex-col gap-10 max-lg:gap-4">
                     {/* Header Group */}
                     <div className="flex flex-col gap-4">
                         <h2
