@@ -15,8 +15,8 @@ import { MainLatestBlog, ExtraMainLatestBlog } from "../../blog/blog_main_latest
 export function HomeLastestBlog() {
     // Fallback to empty objects/arrays to prevent component crash
     const latestData = homeData?.latest || {};
-    const [mainItem] = useState(getArticleByID(latestData.main_blog));
-    const [subItem] = useState(getArticleAsCustomBlog(latestData.sub_blog) || []);
+    const [mainItem] = useState(getArticleByID(latestData.main_article));
+    const [subItem] = useState(getArticleAsCustomBlog(latestData.sub_articles) || []);
 
     return (
         <section

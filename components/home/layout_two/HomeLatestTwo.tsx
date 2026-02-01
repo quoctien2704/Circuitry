@@ -17,7 +17,7 @@ export function HomeLatestTwo() {
     const { latest } = homeLayoutTwoData || {};
 
     const [big_article] = useState(getArticleByID(latest?.main_blog_id));
-    const [articles] = useState(getArticleAsCustomBlog(latest?.extra_blog_id) || []);
+    const [articles] = useState(getArticleAsCustomBlog(latest?.extra_articles_id) || []);
 
     // Pre-calculate reading time safely
 

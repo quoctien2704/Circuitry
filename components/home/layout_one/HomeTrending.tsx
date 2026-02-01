@@ -20,7 +20,7 @@ import { ArticleTrend } from '../../article/article_trend';
 export function HomeTrending() {
     // Ensuring data safety with fallback
     const trendData = homeData?.trend || {};
-    const [articles] = useState(getArticleAsCustomBlog(trendData.blogs) || []);
+    const [articles] = useState(getArticleAsCustomBlog(trendData.articles) || []);
 
     return (
         <section className="my-20" aria-labelledby="trending-heading">

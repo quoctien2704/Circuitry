@@ -48,13 +48,12 @@ export type HomeSliderData = {
     header: string;
     sub_header?: string;
     sub_header_href?: string;
-    bottom_left_sliders_data: number[];
+    bottom_left_sliders_article_data: number[];
     top_right_item_title: string;
     top_right_item_medium_title: string;
     top_right_item_big_title: string;
     top_right_item_link_text: string;
     top_right_item_link_href: string;
-    top_right_item_extra_link_href: string;
     bottom_right_image: ImageData;
     bottom_right_button_content: string;
     bottom_right_button_href: string;
@@ -62,8 +61,8 @@ export type HomeSliderData = {
 
 export type HomeLatestNewData = {
     header: string;
-    main_blog: number,
-    sub_blog: number[];
+    main_article: number,
+    sub_articles: number[];
 }
 
 export type HomeCategoryData = {
@@ -72,7 +71,7 @@ export type HomeCategoryData = {
 
 export type HomeTrendingData = {
     header: string;
-    blogs: number[];
+    articles: number[];
 }
 
 export type HomeSubscribeData = {
@@ -111,7 +110,7 @@ export type HomeBlogColumnTwoData = {
 
 export type HomeBlogLatestTwoData = {
     main_blog_id: number;
-    extra_blog_id: number[];
+    extra_articles_id: number[];
 }
 
 export type HomeBlogBannerTwoData = {

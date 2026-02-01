@@ -30,7 +30,7 @@ export function HomeSlider() {
      * It transforms raw slider data from 'homeData' into a custom blog format.
      */
 
-    const [articles] = useState(getArticleAsCustomBlog(homeData.slider.bottom_left_sliders_data))
+    const [articles] = useState(getArticleAsCustomBlog(homeData.slider.bottom_left_sliders_article_data))
     return (
         <section className='my-40 max-md:my-20 max-md:mt-30'>
             <div className="container mx-auto px-4">
