@@ -66,7 +66,7 @@ export const metadata: Metadata = {
 
 export default function Category() {
     return (
-        <div className="min-h-[80vh] mt-19.5">
+        <div className="min-h-[80vh]">
             <CategoryImage />
             <BreadCrumb data={categoryData.breadcrumb} />
             <CategoryList />

@@ -54,7 +54,7 @@ export function HomeArticleList() {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col gap-10">
                     {/* Main Section Heading */}
-                    <h2 className="text-6xl font-medium italic font-serif max-lg:text-center text-gray-900 dark:text-gray-100">
+                    <h2 className="text-6xl font-medium italic font-serif max-lg:text-center text-foreground/90">
                         {globalArticleData.header}
                     </h2>
 
@@ -112,7 +112,7 @@ export function HomeArticleList() {
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="text-gray-400 italic">No articles available.</p>
+                                <p className="text-foreground/40 italic">No articles available.</p>
                             )}
 
                             {/* Load More Button Container */}

@@ -18,9 +18,8 @@ export function HomeCategory() {
      * based on an array of IDs provided in the 'homeData' configuration.
      */
     const [categorys] = useState(getCategoryByArrayID(homeData.category.categories))
-
     return (
-        <section className="my-30">
+        <section className="my-30 max-lg:my-1">
             <div className="container mx-auto px-4">
                 {/* * Conditional rendering: Only displays the list if categories are found.
                   * Limits the display to the first 6 items to maintain a clean UI.

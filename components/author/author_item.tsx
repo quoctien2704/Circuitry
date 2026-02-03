@@ -15,7 +15,7 @@ export function AuthorItem({ author, layout_index }: { author: AuthorData, layou
             <div className="flex gap-4 items-center">
                 {/* Avatar Container with Dynamic Z-Index and Zoom Effect */}
                 <div
-                    className={`relative z-${layout_index} w-20 border-2 bg-gray-600 dark:text-gray-300 overflow-hidden rounded-full hover:scale-110 transition-transform duration-300`}
+                    className={`relative z-${layout_index} w-20 border-2 bg-gray-600 text-foreground/30 overflow-hidden rounded-full hover:scale-110 transition-transform duration-300`}
                 >
                     <div className="overflow-hidden rounded-full w-fit border-4 border-white">
                         <Link
@@ -38,7 +38,7 @@ export function AuthorItem({ author, layout_index }: { author: AuthorData, layou
                     <h4 className="font-medium font-serif italic text-xl whitespace-nowrap">
                         {author.name || 'No name available'}
                     </h4>
-                    <p className="font-medium text-gray-600 dark:text-gray-300 text-lg whitespace-nowrap">
+                    <p className="font-medium text-foreground/60 text-lg whitespace-nowrap">
                         {author.role || 'No role available'}
                     </p>
                 </div>

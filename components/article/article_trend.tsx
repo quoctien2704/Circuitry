@@ -46,18 +46,18 @@ export function ArticleTrend({ article }: { article: ArticleData }) {
                     <div className="flex items-center gap-x-4 justify-between w-full flex-wrap">
                         <Link
                             aria-label={`Click this to go to ${article.title || 'this'} page`}
-                            className="text-gray-600 dark:text-white hover:text-primary font-medium max-md:text-sm"
+                            className="text-foreground/60 hover:text-primary font-medium max-md:text-sm"
                             href={`/article/${article.author_id || 0}`}
                         >
                             <span>{article.author || 'No author available'}</span>
                         </Link>
-                        <span className="font-medium max-md:text-sm text-gray-600 dark:text-white">
+                        <span className="font-medium max-md:text-sm text-foreground/60">
                             {article.published_at || 'No date available'}
                         </span>
                     </div>
 
                     {/* Trending Title */}
-                    <p className="text-gray-600 dark:text-white xl:text-xl italic sm:text-base max-sm:text-sm">
+                    <p className="text-foreground/90 xl:text-xl italic sm:text-base max-sm:text-sm">
                         {article.title || 'No title available'}
                     </p>
 

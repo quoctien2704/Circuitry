@@ -65,7 +65,7 @@ export const metadata: Metadata = {
 
 export default function Author() {
     return (
-        <div className="min-h-[80vh] mt-19.5">
+        <div className="min-h-[80vh]">
             <AuthorImage />
             <BreadCrumb data={authorData.breadcrumb} />
             <AuthorList />

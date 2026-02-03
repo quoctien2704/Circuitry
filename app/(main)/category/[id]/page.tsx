@@ -77,7 +77,7 @@ export default async function CategoryPage({ params }: { params: { id: string } 
     ]
 
     return (
-        <div className="min-h-[80vh] mt-19.5">
+        <div className="min-h-[80vh]">
             <CategoryImage />
             <BreadCrumb data={breadCrumbData} />
             <CategoryArticleList category={id} />

@@ -1,11 +1,21 @@
 {
   "colors": {
-    "primary": "#ff9671",
-    "secondary": "#845ec2",
-    "dark_primary": "#d9896c",
-    "dark_secondary": "#6c5394"
+    "light":{
+      "primary": "#ff9671",
+      "secondary": "#845ec2",
+      "background":"#ffffff",
+      "foreground":"#0F172A"
+    },
+    "dark":{
+      "primary": "#d9896c",
+      "secondary": "#6c5394",
+      "background":"#080A12",
+      "foreground":"#F8FAFC"
+      
+    }
   },
   "config": {
-    "header_sticky": true
+    "header_sticky": true,
+    "theme_mode":"light"
   }
 }

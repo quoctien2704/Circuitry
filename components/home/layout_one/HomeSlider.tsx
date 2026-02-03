@@ -107,7 +107,7 @@ export function HomeSlider() {
                             </h2>
                             <Link
                                 className="
-                                    flex gap-2 items-center text-gray-600 dark:text-gray-300 hover:text-primary
+                                    flex gap-2 items-center text-foreground/60 hover:text-primary
                                     max-md: text-sm
                                 "
                                 href={homeData.slider.sub_header_href || '/'}

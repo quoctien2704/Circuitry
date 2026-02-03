@@ -41,7 +41,7 @@ export function CategoryItem({ categoryData }: { categoryData: CategoryData }) {
             </h4>
 
             {/* Article Counter Statistics */}
-            <p className="text-base font-medium text-gray-400">
+            <p className="text-base font-medium text-foreground/60">
                 <span>Articles : {countAuthorsByCategory(categoryData.name)}</span>
             </p>
         </Link>

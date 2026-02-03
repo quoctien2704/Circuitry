@@ -29,7 +29,7 @@ export function HomeSubscribe() {
                         {subscribeData.header || 'Subscribe to our newsletter'}
                     </h2>
 
-                    <h3 className='text-lg font-medium text-gray-500 dark:text-gray-300 max-lg:text-base max-lg:text-center'>
+                    <h3 className='text-lg font-medium text-foreground/50 max-lg:text-base max-lg:text-center'>
                         {subscribeData.sub_header || 'Get the latest updates right in your inbox'}
                     </h3>
 
@@ -57,7 +57,7 @@ export function HomeSubscribe() {
                         </div>
                     </Form>
 
-                    <p className='text-gray-600 dark:text-gray-300 font-medium max-lg:text-center'>
+                    <p className='text-foreground/60 font-medium max-lg:text-center'>
                         {subscribeData.support_text || 'We respect your privacy. Unsubscribe at any time.'}
                     </p>
                 </div>

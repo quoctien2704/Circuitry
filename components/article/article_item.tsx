@@ -66,7 +66,7 @@ export function ArticleItem({ article }: { article: ArticleData }) {
 
                     {/* Short Description / Excerpt */}
                     <p className="
-                        text-md text-gray-600 dark:text-gray-300 font-medium italic
+                        text-md text-foreground/60 font-medium italic
                         max-lg:text-lg
                     ">
                         {article.content || 'No content Available'}
@@ -105,7 +105,7 @@ export function Extra_ArticleItem({ article, layout_index }: { article: ArticleD
         <div className="-mt-10 group-[.active]/outer:mt-4 group-hover/outer:mt-4 transition-all duration-300 w-fit">
             <div className="flex gap-4 items">
                 {/* Stacked Circular Image with Zoom Effect */}
-                <div className={`relative z-${layout_index} w-20 border-2 bg-gray-600 dark:text-gray-300 overflow-hidden rounded-full hover:scale-110 transition-transform`}>
+                <div className={`relative z-${layout_index} w-20 border-2 bg-gray-600 text-foreground/30 overflow-hidden rounded-full hover:scale-110 transition-transform`}>
                     <div className="overflow-hidden rounded-full w-fit border-4 border-white">
                         <Link href={`/article/${article.id}`}>
                             <Image
@@ -124,7 +124,7 @@ export function Extra_ArticleItem({ article, layout_index }: { article: ArticleD
                     <h4 className="font-medium font-serif italic text-xl line-clamp-1">
                         {article.title || 'No title available'}
                     </h4>
-                    <p className="font-medium text-gray-600 dark:text-gray-300 text-xl line-clamp-1">
+                    <p className="font-medium text-foreground/60 text-xl line-clamp-1">
                         {article.category || 'No category Available'}
                     </p>
                 </div>
@@ -183,7 +183,7 @@ export function ArtcileGralleryItem({ article }: { article: ArticleData }) {
                 <h3 className="text-white mt-auto text-2xl line-clamp-2">
                     {article.title || 'No title available'}
                 </h3>
-                <p className="text-gray-300 text-base line-clamp-3">
+                <p className="text-foreground/30 text-base line-clamp-3">
                     {article.content || 'No content available'}
                 </p>
             </div>

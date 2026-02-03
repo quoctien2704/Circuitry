@@ -3,32 +3,25 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
-    --primary-effective: var(--primary);
-    --secondary-effective: var(--secondary);
-  }
-
-  .dark {
-    --background: 225 40% 5%;
-    --foreground: 210 40% 98%;
-    --primary-effective: var(--dark_primary);
-    --secondary-effective: var(--dark_secondary);
-  }
-
-  body {
-    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
-  }
+:root{
+    --primary: var(--primary);
+    --secondary: var(--secondary);
+    --background: var(--background);
+    --foreground: var(--foreground)
 }
 
 @theme inline {
   /* Tailwind sẽ sử dụng biến trung gian này */
-  --color-primary: var(--primary-effective);
-  --color-secondary: var(--secondary-effective);
-}
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
 
+}
+body {
+  /* Tailwind v3/v4 hỗ trợ gọi biến trực tiếp như thế này */
+  @apply bg-background text-foreground;
+}
 img {
   object-fit: cover;
   height: 100%;

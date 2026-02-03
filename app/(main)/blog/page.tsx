@@ -69,7 +69,7 @@ export const metadata: Metadata = {
 };
 export default function Blog() {
     return (
-        <div className="min-h-[80vh] mt-19.5">
+        <div className="min-h-[80vh]">
             <BlogImage />
             <BreadCrumb data={blogData.breadcrumb} />
             <Suspense>

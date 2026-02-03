@@ -35,7 +35,7 @@ export function MainLatestBlog({ article }: { article: ArticleData }) {
             {/* Post Content Metadata and Summary */}
             <div className="flex-1 flex flex-col justify-around">
                 {/* Category Indicator */}
-                <span className="flex font-medium gap-2 items-center text-gray-600 dark:text-gray-300 uppercase text-sm tracking-wide">
+                <span className="flex font-medium gap-2 items-center text-foreground/60 uppercase text-sm tracking-wide">
                     <GoDotFill className="text-[10px]" aria-hidden="true" />
                     {article.category || 'Uncategorized'}
                 </span>
@@ -47,7 +47,7 @@ export function MainLatestBlog({ article }: { article: ArticleData }) {
                 ">
                     {/* Post Title */}
                     <h3 className="
-                        text-3xl font-medium line-clamp-2 italic font-serif text-gray-900 dark:text-gray-100
+                        text-3xl font-medium line-clamp-2 italic font-serif text-foreground/90
                         max-lg:text-xl
                     ">
                         {article.title || 'Untitled Post'}
@@ -55,7 +55,7 @@ export function MainLatestBlog({ article }: { article: ArticleData }) {
 
                     {/* Excerpt/Summary */}
                     <p className="
-                        text-2xl font-medium line-clamp-3 italic text-gray-600 dark:text-gray-400
+                        text-2xl font-medium line-clamp-3 italic text-foreground/60
                         max-lg:text-lg max-md:text-base
                     ">
                         {article.content || 'No summary available for this post.'}
@@ -64,7 +64,7 @@ export function MainLatestBlog({ article }: { article: ArticleData }) {
 
                 {/* Author and Date Meta Info */}
                 <footer className="
-                    flex gap-1 items-center text-gray-600 dark:text-gray-300
+                    flex gap-1 items-center text-foreground/60
                     max-lg:mt-8 max-lg:text-sm
                 ">
                     <Link
@@ -117,7 +117,7 @@ export function ExtraMainLatestBlog({ article }: { article: ArticleData }) {
             {/* Information Section */}
             <div className="flex-1 flex flex-col justify-around">
                 {/* Secondary Content Preview (Top) */}
-                <p className="text-base font-medium text-gray-500 dark:text-gray-400 line-clamp-2 italic">
+                <p className="text-base font-medium text-foreground/60 line-clamp-2 italic">
                     {article.content || 'Click to read this featured story...'}
                 </p>
 
@@ -130,21 +130,21 @@ export function ExtraMainLatestBlog({ article }: { article: ArticleData }) {
                 <div className="flex flex-col gap-2 mt-4">
                     {/* Main Post Title */}
                     <h3 className="
-                        text-xl font-bold font-serif line-clamp-2 text-gray-900 dark:text-gray-100
+                        text-xl font-bold font-serif line-clamp-2 text-foreground/90
                         max-lg:text-lg
                     ">
                         {article.title || 'Untitled Post'}
                     </h3>
 
                     {/* Main Content Excerpt */}
-                    <p className="text-base font-medium text-gray-600 dark:text-gray-300 line-clamp-2">
+                    <p className="text-base font-medium text-foreground/60 line-clamp-2">
                         {article.content || 'No description provided.'}
                     </p>
                 </div>
 
                 {/* Post Footer Metadata */}
                 <footer className="
-                    flex gap-1 items-center text-sm text-gray-500 dark:text-gray-400
+                    flex gap-1 items-center text-sm text-foreground/50
                     max-lg:mt-8
                 ">
                     <Link

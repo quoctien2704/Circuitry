@@ -87,7 +87,7 @@ export default async function BlogPage({ params }: { params: { id: number } }) {
         }
     ]
     return (
-        <div className="min-h-[80vh] mt-19.5">
+        <div className="min-h-[80vh]">
             <BlogImage title={`Blog ${id} Page`} />
             {data && <BreadCrumb data={breadCrumbData} />}
             <BlogList id={id} />

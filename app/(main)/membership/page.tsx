@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 };
 export default function Membership() {
     return (
-        <div className="min-h-[80vh] mt-19.5">
+        <div className="min-h-[80vh]">
             <MembershipSlider />
             <MembershipTop />
             <MembershipSales />

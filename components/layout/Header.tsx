@@ -32,7 +32,7 @@ export default function Header() {
     }, [pathname])
 
     return (
-        <header className={`${theme.config.header_sticky ? "fixed" : "absolute"} top-0 w-screen z-15 border-b border-b-gray-200 bg-white dark:bg-[hsl(225,40%,5%)] dark:border-gray-800`}>
+        <header className={`${theme.config.header_sticky ? "sticky" : "absolute"} w-full top-0 z-15 border-b bg-[var(--background)] border-b-gray-100 dark:border-gray-900`}>
 
             <div className="relative container mx-auto px-4">
                 <div className="flex items-center justify-between gap-8 h-19.5">

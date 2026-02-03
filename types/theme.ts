@@ -1,11 +1,14 @@
 export type ThemeConfig = {
   colors: {
-    primary: string
-    secondary: string
-    dark_primary: string
-    dark_secondary: string
+    [key: string]:{
+      primary: string
+      secondary: string
+      background: string;
+      foreground: string;
+    }
   },
   config: {
     header_sticky: boolean
+    theme_mode: string
   }
 }
