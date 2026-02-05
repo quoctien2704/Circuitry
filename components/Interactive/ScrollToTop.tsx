@@ -31,3 +31,11 @@ export function ScrollToTop() {
 
     return null;
 }
+
+export function ScrollToTopPosition(top: number) {
+    console.log("happen")
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+}

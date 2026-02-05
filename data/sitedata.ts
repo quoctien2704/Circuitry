@@ -5,16 +5,19 @@ import {
     CategoryData,
     ChangeLogPageData,
     FooterData, GlobalArticleListData, HeaderData,
-    HomeData,
     HomeLayoutFourData,
+    HomeLayoutOneData,
     HomeLayoutThreeData,
     HomeLayoutTwoData,
     MembershipData,
+    siteDataType,
     TermsData
 } from '@/types'
+
 import rawSiteData from './sitedata.json'
 
 
+export const globalSiteData = rawSiteData satisfies siteDataType
 
 // Global Layout Data
 export const headerData = rawSiteData.header satisfies HeaderData;
@@ -24,7 +27,7 @@ export const footerData = rawSiteData.footer satisfies FooterData;
 export const globalArticleData = rawSiteData.global_articles satisfies GlobalArticleListData
 
 // Home page data
-export const homeData = rawSiteData.home.layout_1 satisfies HomeData
+export const homeData = rawSiteData.home.layout_1 satisfies HomeLayoutOneData
 export const homeLayoutTwoData = rawSiteData.home.layout_2 satisfies HomeLayoutTwoData
 export const homeLayoutThreeData = rawSiteData.home.layout_3 satisfies HomeLayoutThreeData
 export const homeLayoutFourData = rawSiteData.home.layout_4 satisfies HomeLayoutFourData

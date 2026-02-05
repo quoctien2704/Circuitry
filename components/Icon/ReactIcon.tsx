@@ -14,11 +14,14 @@ import { FaBorderStyle } from "react-icons/fa";
 import { FaDesktop } from "react-icons/fa";
 import { FaTabletAlt } from "react-icons/fa";
 import { FaMobileAlt } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa";
+import { GoPlus } from "react-icons/go";
 import { FaArrowUp } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
+import { IoIosColorFill } from "react-icons/io";
+import { FaRegQuestionCircle } from "react-icons/fa";
 /**
  * ReactIcon Component
  * A centralized icon provider that maps string names to React Icons.
@@ -54,11 +57,14 @@ const getIconElement = (name: string, size?: number): React.ReactNode | null => 
         desktop_icon: <FaDesktop size={iconSize}/>,
         tablet_icon: <FaTabletAlt size={iconSize}/>,
         mobile_icon: <FaMobileAlt size={iconSize}/>,
-        plus_icon: <FaPlus size={iconSize}/>,
+        plus_icon: <GoPlus size={iconSize}/>,
         arrow_up_icon: <FaArrowUp size={iconSize} />,
         arrow_down_icon: <FaArrowDown size={iconSize} />,
         arrow_left_icon: <FaArrowLeft size={iconSize} />,
-        arrow_right_icon: <FaArrowRight size={iconSize} />
+        arrow_right_icon: <FaArrowRight size={iconSize} />,
+        close_icon: <IoMdClose size={iconSize} />,
+        color_icon: <IoIosColorFill size={iconSize} />,
+        circle_question_icon: <FaRegQuestionCircle size={iconSize} />
     };
 
     return items[name] || <span>{name}</span>;

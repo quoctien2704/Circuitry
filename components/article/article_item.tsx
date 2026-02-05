@@ -63,7 +63,7 @@ export function ArticleItem({ article }: { article: ArticleData }) {
                     ">
                         {article.title || "No Title Available"}
                     </h3>
-
+``
                     {/* Short Description / Excerpt */}
                     <p className="
                         text-md text-foreground/60 font-medium italic

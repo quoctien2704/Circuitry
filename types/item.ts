@@ -61,3 +61,10 @@ export type BreadCrumbData = {
     title: string;
     href: string;
 }[]
+
+export interface BoundingBox {
+    left: number,
+    top: number,
+    width:  number,
+    height:  number,
+}

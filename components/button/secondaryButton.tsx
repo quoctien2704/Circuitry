@@ -5,7 +5,7 @@
  * * @param {string} content - The text or label to be displayed inside the button.
  */
 
-export function SecondaryButton({ content }: { content: string }) {
+export function SecondaryButton({id, content }: {id:string, content: string }) {
 
     /**
      * Renders a styled button with a focus on smooth transitions and responsiveness.
@@ -16,11 +16,12 @@ export function SecondaryButton({ content }: { content: string }) {
      */
 
     return (
-        <button className="
-            transition-all duration-300 shadow-lg bg-secondary border-2 border-secondary hover:bg-gray-100 dark:hover:bg-[hsl(225,40%,5%)] hover:text-secondary text-lg text-white px-5 py-2.5 rounded-lg font-medium cursor-pointer
-            max-lg:px-4 max-lg:py-2 max-lg:text-base
-
-        ">
+        <button 
+            id={id}
+            className="
+                transition-all duration-300 shadow-lg bg-secondary border-2 border-secondary hover:bg-gray-100 dark:hover:bg-[hsl(225,40%,5%)] hover:text-secondary text-lg text-white px-5 py-2.5 rounded-lg font-medium cursor-pointer
+                max-lg:px-4 max-lg:py-2 max-lg:text-base
+            ">
             <span>
                 {content || 'No content available'}
             </span>

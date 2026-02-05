@@ -1,4 +1,4 @@
-import { BreadCrumbData } from "./item";
+import { BlogData, BreadCrumbData } from "./item";
 import { NavLinks } from "./menu"
 
 export type LinksData = {
@@ -14,6 +14,7 @@ export type HeaderData = {
 }
 
 export type SocialLinksData = {
+    readonly type: string | 'social'
     social_svg?: string;
     social_name: string;
     social_href: string;
@@ -36,27 +37,29 @@ export type FooterData = {
 }
 
 export type ImageData = {
+    readonly type: string | 'image'
     src: string;
     alt: string;
     width: number;
     height: number;
 }
 
+
 // Home One
 
 export type HomeSliderData = {
-    header: string;
-    sub_header?: string;
-    sub_header_href?: string;
-    bottom_left_sliders_article_data: number[];
-    top_right_item_title: string;
-    top_right_item_medium_title: string;
-    top_right_item_big_title: string;
-    top_right_item_link_text: string;
-    top_right_item_link_href: string;
-    bottom_right_image: ImageData;
-    bottom_right_button_content: string;
-    bottom_right_button_href: string;
+    home_layout_one_header_001: string;
+    home_layout_one_sub_header_002?: string;
+    home_layout_one_sub_header_href_003?: string;
+    home_layout_one_bottom_left_sliders_article_data_004: number[];
+    home_layout_one_top_right_item_title_005: string;
+    home_layout_one_top_right_item_medium_title_006: string;
+    home_layout_one_top_right_item_big_title_007: string;
+    home_layout_one_top_right_item_link_text_008: string;
+    home_layout_one_top_right_item_link_href_009: string;
+    home_layout_one_bottom_right_image_010: ImageData;
+    home_layout_one_bottom_right_button_content_011: string;
+    home_layout_one_bottom_right_button_href_012: string;
 }
 
 export type HomeLatestNewData = {
@@ -235,7 +238,7 @@ export type HomeNewsletterBoxData = {
 }
 
 // Big Data
-export type HomeData = {
+export type HomeLayoutOneData = {
     slider: HomeSliderData;
     category: HomeCategoryData;
     latest: HomeLatestNewData;
@@ -265,6 +268,27 @@ export type HomeLayoutFourData = {
     promo: HomePromoBannerData;
     popular: HomePopularCategoryData;
     letter: HomeNewsletterBoxData;
+}
+
+export interface HomeData{
+    layout_1: HomeLayoutOneData,
+    layout_2: HomeLayoutTwoData,
+    layout_3: HomeLayoutThreeData,
+    layout_4: HomeLayoutFourData
+}
+
+export interface siteDataType {
+    header: HeaderData,
+    global_articles: GlobalArticleListData,
+    home: HomeData,
+    about: AboutData,
+    membership: MembershipData,
+    terms: TermsData,
+    category: CategoryData
+    author: AuthorData
+    blog: BlogPageData
+    footer: FooterData,
+    changelog: ChangeLogPageData
 }
 
 export type GlobalArticleListData = HomeArticlesListData;
@@ -449,4 +473,13 @@ export type ChangeLogPageData = {
     title: string;
     breadcrumb: BreadCrumbData
     updates: ChangeLogVersion[]
+}
+
+export type EditorValue = ImageData | SocialLinksData;
+
+export interface fieldSiteData {
+    [key:string]: string | number | number[] | EditorValue
+}
+export interface layoutSiteData {
+    [key:string]:fieldSiteData
 }

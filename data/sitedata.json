@@ -111,29 +111,29 @@
     "home": {
         "layout_1": {
             "slider": {
-                "header": "Welcome to Circuitry",
-                "sub_header": "Seeallpost",
-                "sub_header_href": "/blog",
-                "bottom_left_sliders_article_data": [
+                "home_layout_one_header_001": "Welcome to Circuitry",
+                "home_layout_one_sub_header_002": "Seeallpost",
+                "home_layout_one_sub_header_href_003": "/blog",
+                "home_layout_one_bottom_left_sliders_article_data_004": [
                     1,
                     2,
                     3,
                     4
                 ],
-                "top_right_item_title": "Latest Gadgets",
-                "top_right_item_medium_title": "Tech News & Reviews",
-                "top_right_item_big_title": "Stay Updated",
-                "top_right_item_link_text": "Read More",
-                "top_right_item_link_href": "/blog/latest",
-                "top_right_item_extra_link_href": "/blog",
-                "bottom_right_image": {
+                "home_layout_one_top_right_item_title_005": "Latest Gadgets",
+                "home_layout_one_top_right_item_medium_title_006": "Tech News & Reviews",
+                "home_layout_one_top_right_item_big_title_007": "Stay Updated",
+                "home_layout_one_top_right_item_link_text_008": "Read More",
+                "home_layout_one_top_right_item_link_href_009": "/blog/latest",
+                "home_layout_one_bottom_right_image_010": {
+                    "type":"image",
                     "src": "/pages/home/home_slider_right_bottom.jpg",
                     "alt": "Latest Gadgets",
                     "width": 600,
                     "height": 600
                 },
-                "bottom_right_button_content": "Read more",
-                "bottom_right_button_href": "/blog"
+                "home_layout_one_bottom_right_button_content_011": "Read more",
+                "home_layout_one_bottom_right_button_href_012": "/blog"
             },
             "category": {
                 "categories": [
@@ -207,6 +207,7 @@
             },
             "subscribe": {
                 "image": {
+                    "type":"image",
                     "src": "/support.jpg",
                     "alt": "Circuitry Newsletter",
                     "width": 600,
@@ -230,6 +231,7 @@
                 },
                 "right": {
                     "image_container": {
+                        "type":"image",
                         "src": "/HomeHeroThreeImage.jpg",
                         "width": 500,
                         "height": 500,
@@ -291,6 +293,7 @@
             "subscribe": {
                 "left": {
                     "image": {
+                        "type":"image",
                         "src": "/home_support_3.jpg",
                         "width": 2000,
                         "height": 2000,
@@ -350,6 +353,7 @@
                 "banners": [
                     {
                         "image": {
+                            "type":"image",
                             "src": "/pages/home/layout_4/Promo_Banner_1.jpg",
                             "width": 2000,
                             "height": 2000,
@@ -362,6 +366,7 @@
                     },
                     {
                         "image": {
+                            "type":"image",
                             "src": "/pages/home/layout_4/Promo_Banner_2.jpg",
                             "width": 2000,
                             "height": 2000,
@@ -374,6 +379,7 @@
                     },
                     {
                         "image": {
+                            "type":"image",
                             "src": "/pages/home/layout_4/Promo_Banner_3.jpg",
                             "width": 2000,
                             "height": 2000,
@@ -398,6 +404,7 @@
                 "contents": [
                     {
                         "svg": {
+                            "type":"social",
                             "svg": "engine_icon",
                             "social_name": "Weekly Digest",
                             "social_href": "/"
@@ -406,6 +413,7 @@
                     },
                     {
                         "svg": {
+                            "type":"social",
                             "svg": "tutorial_icon",
                             "social_name": "Exclusive Content",
                             "social_href": "/"
@@ -414,6 +422,7 @@
                     },
                     {
                         "svg": {
+                            "type":"social",
                             "svg": "discord_icon",
                             "social_name": "Community",
                             "social_href": "/"
@@ -422,6 +431,7 @@
                     },
                     {
                         "svg": {
+                            "type":"social",
                             "svg": "guide_icon",
                             "social_name": "Documentation",
                             "social_href": "/"
@@ -430,6 +440,7 @@
                     },
                     {
                         "svg": {
+                            "type":"social",
                             "svg": "open_source_icon",
                             "social_name": "Code Samples",
                             "social_href": "/"
@@ -438,6 +449,7 @@
                     },
                     {
                         "svg": {
+                            "type":"social",
                             "svg": "answer_icon",
                             "social_name": "Expert Q&A",
                             "social_href": "/"
@@ -462,6 +474,7 @@
             "sub_title_href": "/blog",
             "paragraph": "Circuitry delivers in-depth articles about electronics, hardware design, embedded systems, and modern technology trends — written for engineers, makers, and curious minds.",
             "image": {
+                "type":"image",
                 "src": "/pages/about/about_1.jpg",
                 "alt": "Our Focus Image Container",
                 "width": 1280,
@@ -472,6 +485,7 @@
             "title": "Engineering Knowledge, Explained Clearly",
             "sub_title": "Circuitry is a modern blogging platform focused on electronics, circuits, and real-world engineering insights.",
             "image": {
+                "type":"image",
                 "src": "/pages/about/about_2.jpg",
                 "alt": "Engineering Knowledge, Explained Clearly",
                 "width": 1920,
@@ -484,6 +498,7 @@
             "contacts": [
                 {
                     "svg_data": {
+                        "type":"social",
                         "social_svg": "email_icon",
                         "social_name": "Email Icon",
                         "social_href": "/"
@@ -493,6 +508,7 @@
                 },
                 {
                     "svg_data": {
+                        "type":"social",
                         "social_svg": "phone_icon",
                         "social_name": "Phone Icon",
                         "social_href": "/"
@@ -502,6 +518,7 @@
                 },
                 {
                     "svg_data": {
+                        "type":"social",
                         "social_svg": "address_icon",
                         "social_name": "Address Icon",
                         "social_href": "/"
@@ -517,6 +534,7 @@
             "button_content": "Read Our Journey",
             "button_href": "/blog",
             "image": {
+                "type":"image",
                 "src": "/pages/about/about_3.jpg",
                 "alt": "The Story Behind Circuitry",
                 "width": 1000,
@@ -525,6 +543,7 @@
         },
         "full_banner": {
             "image": {
+                "type":"image",
                 "src": "/pages/about/about_4.jpg",
                 "alt": "Circuitry — A Modern Technology & Electronics Blogging Platform",
                 "width": 1920,
@@ -570,6 +589,7 @@
         "sales": [
             {
                 "sv_icon": {
+                    "type":"social",
                     "social_svg": "access_icon",
                     "social_name": "Premium Content",
                     "social_href": "/"
@@ -582,6 +602,7 @@
             },
             {
                 "sv_icon": {
+                    "type":"social",
                     "social_svg": "premium_icon",
                     "social_name": "Community",
                     "social_href": "/"
@@ -594,6 +615,7 @@
             },
             {
                 "sv_icon": {
+                    "type":"social",
                     "social_svg": "ultra_icon",
                     "social_name": "Updates",
                     "social_href": "/"
@@ -609,6 +631,7 @@
             "sliders": [
                 {
                     "image": {
+                        "type":"image",
                         "src": "/pages/membership/membership_slider_1.jpg",
                         "alt": "Deep analysis of emerging consumer electronics and accessories.",
                         "width": 1920,
@@ -619,6 +642,7 @@
                 },
                 {
                     "image": {
+                        "type":"image",
                         "src": "/pages/membership/membership_slider_2.jpg",
                         "alt": "Hands-on reviews written by engineers and tech specialists.",
                         "width": 1920,
@@ -629,6 +653,7 @@
                 },
                 {
                     "image": {
+                        "type":"image",
                         "src": "/pages/membership/membership_slider_3.jpg",
                         "alt": "Well-researched buying guides for professionals and enthusiasts.",
                         "width": 1920,
@@ -657,6 +682,7 @@
             "benefitItems": [
                 {
                     "image": {
+                        "type":"image",
                         "src": "/pages/membership/membership_benefit_1.jpg",
                         "alt": "In-Depth Knowledge",
                         "width": 640,
@@ -668,6 +694,7 @@
                 },
                 {
                     "image": {
+                        "type":"image",
                         "src": "/pages/membership/membership_benefit_2.jpg",
                         "alt": "Expert Perspective",
                         "width": 640,
@@ -679,6 +706,7 @@
                 },
                 {
                     "image": {
+                        "type":"image",
                         "src": "/pages/membership/membership_benefit_3.jpg",
                         "alt": "Ad-Free Experience",
                         "width": 640,
@@ -690,6 +718,7 @@
                 },
                 {
                     "image": {
+                        "type":"image",
                         "src": "/pages/membership/membership_benefit_4.jpg",
                         "alt": "Future-Proof Learning",
                         "width": 640,
@@ -776,6 +805,7 @@
     },
     "category": {
         "image": {
+            "type":"image",
             "src": "/category/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg",
             "alt": "Arnel Hasanovic",
             "width": 1920,
@@ -799,6 +829,7 @@
     },
     "author": {
         "image": {
+            "type":"image",
             "src": "/author/chris-spiegl-CSJPm2POibQ-unsplash.jpg",
             "alt": "Chris Spiegl",
             "width": 1920,
@@ -822,6 +853,7 @@
     },
     "blog": {
         "image": {
+            "type":"image",
             "src": "/blogs/blog.jpg",
             "alt": "Blog Page",
             "width": 1920,
@@ -848,21 +880,25 @@
         "footer_paragraph": "Circuitry is a modern blogging platform focused on technology, electronics, and the digital world.",
         "footer_social_links": [
             {
+                "type":"social",
                 "social_svg": "facebook_icon",
                 "social_name": "Facebook",
                 "social_href": "/"
             },
             {
+                "type":"social",
                 "social_svg": "instagram_icon",
                 "social_name": "Instagram",
                 "social_href": "/"
             },
             {
+                "type":"social",
                 "social_svg": "github_icon",
                 "social_name": "GitHub",
                 "social_href": "/"
             },
             {
+                "type":"social",
                 "social_svg": "youtube_icon",
                 "social_name": "Youtube",
                 "social_href": "/"

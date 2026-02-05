@@ -20,7 +20,7 @@ export function HomeLastestBlog() {
 
     return (
         <section
-            className="my-20 py-20 bg-gray-100 dark:bg-black"
+            className="my-20 py-20 bg-foreground/10 dark:bg-black"
             aria-labelledby="latest-blog-header"
         >
             <div className="container mx-auto px-4">
