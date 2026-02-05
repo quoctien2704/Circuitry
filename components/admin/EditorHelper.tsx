@@ -13,17 +13,16 @@ export const EditorHelper = ({isOpen,onClose,box_id}:{isOpen:boolean,onClose: ()
     useEffect(() => {
         
         const updateBox = () => {
-            console.log("Updated")
             const nextBox = getBoxFromElementId(box_id || '');
+            if(!nextBox === null) return null
             setBox(nextBox);
             return nextBox;
         }
 
         const updatePosition = (bounding_box: BoundingBox | null) => {
             if(!bounding_box) return;
-            console.log("Happen")
             iframeRef.current?.contentWindow?.scrollTo({
-                top: (bounding_box?.top || 0)  + (iframeRef.current?.contentWindow?.scrollY || 0)  -window.innerHeight / 2,
+                top: (bounding_box?.top || 0) + (iframeRef.current?.contentWindow?.scrollY || 0)  -window.innerHeight / 2 + (bounding_box.height/2),
                 behavior: "smooth",
             });
         }
@@ -61,6 +60,7 @@ export const EditorHelper = ({isOpen,onClose,box_id}:{isOpen:boolean,onClose: ()
 
         const elRect = el.getBoundingClientRect();
         const iframeRect = iframe.getBoundingClientRect();
+        
         return {
             left: iframeRect.left + elRect.left,
             top: iframeRect.top + elRect.top,
@@ -73,7 +73,7 @@ export const EditorHelper = ({isOpen,onClose,box_id}:{isOpen:boolean,onClose: ()
     const padding = 12
     return (
         <div className="fixed left-0 top-0 w-full h-full bg-black/60 mix-blend-multiply">
-            <button className="sticky w-full h-full  z-19 isolate" onClick={onClose}></button>
+            <button className="sticky w-full h-full z-29 isolate" onClick={onClose}></button>
             <div
                 className="absolute pointer-events-none z-30 animate-pulse"
                     style={{

@@ -13,10 +13,12 @@ interface ThemeContextData {
     siteData: siteDataType,
     selectedSiteData: layoutSiteData;
     layoutName: string
+    SaveAll: () => void;
     updateTheme: (newConfig: ThemeConfig) => void;
     updateNestedConfig: (path:string,value:any) => void,
     updateNestedSiteData: (path:string,value:any) => void,
     registerIframe: (ref: HTMLIFrameElement | null) => void;
+    getDeep: (obj:any, path: string) => void | null
 }
 export const ThemeContext = createContext<ThemeContextData | undefined>(undefined);
 

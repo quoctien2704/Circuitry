@@ -39,7 +39,7 @@ export const FilterForArticle = (articles: ArticleData[], filter?: ReadonlyURLSe
 
 export const getArticleAsCustomBlog = (ids: number[]): ArticleData[] => {
     if (!ids) return articlesData
-    return articlesData.filter((article) => ids.includes(article.id))
+    return ids.map(id => getArticleByID(id));
 }
 export const getArticleByBlogID = (id?: number): ArticleData[] => {
     if (!id) return articlesData

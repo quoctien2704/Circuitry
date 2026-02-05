@@ -49,10 +49,12 @@ export function HomeSlider() {
         },
         bottom_right_button_content: slider.home_layout_one_bottom_right_button_content_011 || "No button content available",
         bottom_right_button_href: slider.home_layout_one_bottom_right_button_href_012 || "/"
-    }), [siteData.home.layout_1.slider]);
+    }), [slider]);
 
     // Initialize articles based on the IDs provided in the data
-    const [articles] = useState(getArticleAsCustomBlog(data.bottom_left_sliders_article_data));
+    const articles = useMemo(() => (
+        getArticleAsCustomBlog(data.bottom_left_sliders_article_data)
+    ),[data.bottom_left_sliders_article_data])
 
     /**
      * Memoized UI structure.
@@ -70,7 +72,7 @@ export function HomeSlider() {
                             
                             {/* Top Promotion Card */}
                             <div className="relative p-8 flex flex-col gap-4 bg-blue-200 dark:bg-cyan-950 rounded-4xl md:aspect-square max-xl:flex-1 max-md:height-50">
-                                <span id='home_layout_one_top_right_item_title_005' className="font-medium text-base px-6 py-2 w-fit rounded-4xl flex gap-2 items-center justify-center bg-white dark:bg-[hsl(225,45%,5%)]">
+                                <span id='home_layout_one_top_right_item_title_005' className="font-medium text-base p-4 w-fit rounded-xl flex gap-2 items-center justify-center bg-white dark:bg-[hsl(225,45%,5%)]">
                                     <GoDotFill />
                                     {data.top_right_item_title}
                                 </span>
@@ -114,13 +116,16 @@ export function HomeSlider() {
                         <div className="w-[73%] flex flex-col gap-10 max-xl:w-full">
                             
                             {/* Section Header with "View All" Link */}
-                            <div className="flex gap-4 items-end justify-between max-sm:flex-col max-sm:items-center max-sm:gap-2">
-                                <h2 id='home_layout_one_header_001' className="text-6xl font-serif italic max-lg:text-5xl max-sm:text-center">
+                            <div className="flex gap-10 items-end justify-between max-sm:flex-col max-sm:items-center max-sm:gap-2 w-full">
+                                <h2 
+                                    id='home_layout_one_header_001' 
+                                    className="text-6xl font-serif italic max-lg:text-5xl max-sm:text-center"
+                                >
                                     {data.header}
                                 </h2>
                                 <Link
                                     id='home_layout_one_sub_header_href_003'
-                                    className="flex gap-2 items-center text-foreground/60 hover:text-primary max-md:text-sm"
+                                    className="flex gap-2 items-center text-foreground/60 hover:text-primary max-md:text-smm"
                                     href={data.sub_header_href}
                                 >
                                     <span id='home_layout_one_sub_header_002'>{data.sub_header}</span>
@@ -129,7 +134,7 @@ export function HomeSlider() {
                             </div>
 
                             {/* Swiper Article Slider */}
-                            <div>
+                            <div id='home_layout_one_bottom_left_sliders_article_data_004'>
                                 {articles && articles.length > 0 && (
                                     <Swiper
                                         spaceBetween={30}

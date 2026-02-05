@@ -3,7 +3,7 @@
 
     import { ThemeConfig } from "@/types/theme";
     import { ThemeContext } from "./ThemeContext";
-    import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
+    import React, { useEffect, useMemo, useRef, useState } from "react";
     import toast from "react-hot-toast";
     import { layoutSiteData, siteDataType } from "@/types";
     import { theme } from "@/data/theme";
@@ -38,10 +38,10 @@
                 if (!(key in current)) current[key] = {}; 
                 current = current[key];
             }
-
             return current      
             
         },[layoutName,siteData]);
+
 
         const themeOptions = useMemo(() => {
             return Object.keys(config.colors) || ['light','dark'];
@@ -54,8 +54,10 @@
             siteData,
             selectedSiteData,
             layoutName,
+            SaveAll: () => SaveAll(),
             handleAddNewStyleToConfig: (formdata: FormData) => handleAddNewStyleToConfig(formdata),
             resetConfig: () => resetConfig(),
+            getDeep: (obj:any, path: string) => getDeep(obj,path),
             updateTheme: (newConfig: ThemeConfig) => setConfig(newConfig),
             updateNestedConfig: (path:string,value:any) => updateNestedConfig(path,value),
             updateNestedSiteData: (path:string,value:any) => updateNestedSiteData(path,value),
@@ -80,8 +82,6 @@
                     case "LOCAL_UPDATE_BACKGROUND": root.style.setProperty("--background", payload || config.colors['light'].background); break;
                     case "LOCAL_UPDATE_FOREGROUND": root.style.setProperty("--foreground", payload || config.colors['light'].foreground); break;
                     case "UPDATE_LAYOUT_NAME": setLayoutName(payload); break;
-                    case "UPDATE_CONTENT_FIELD": updateNestedSiteData(payload.updatePathName,payload.value); break;
-                    
                 }
             }
             window.addEventListener('message',handleMessage)
@@ -99,19 +99,42 @@
             
 
             () => window.removeEventListener('message',handleMessage)
-            if(config !== theme){
-                saveConfig();
-            }
 
         }, [config.colors,config.config.theme_mode])
+
+        useEffect(() => {
+
+            const handleMessage = (event: MessageEvent) => {
+                const { type, payload } = event.data;
+                switch(type){
+                    case "RESET_CONTENT": setSiteData(globalSiteData); break;
+                    case "UPDATE_CONTENT_FIELD": updateNestedSiteData(payload.updatePathName,payload.value); break;
+                    case "UPDATE_CONTENT_ARTICLES": updateNestedSiteData(payload.updatePathName,payload.value); break;
+                    case "UPDATE_CONTENT_IMAGE": updateNestedSiteData(payload.updatePathName,payload.value); break;
+                }
+            }
+            window.addEventListener('message',handleMessage);
+            () => window.removeEventListener('message',handleMessage)
+
+            console.log(siteData.home.layout_1.slider.home_layout_one_bottom_left_sliders_article_data_004)
+
+        },[siteData])
 
         useEffect(() => {
             
             requestAnimationFrame(() => {
                 const savedTheme = localStorage.getItem('config') as string;
+                const savedSite = localStorage.getItem('sitedata') as string;
                 if (savedTheme) {
                     try {
                         setConfig(JSON.parse(savedTheme));
+                    } catch (error) {
+                        console.error("Lỗi parse JSON:", error);
+                    }
+                }
+                if (savedSite) {
+                    try {
+                        setSiteData(JSON.parse(savedSite));
                     } catch (error) {
                         console.error("Lỗi parse JSON:", error);
                     }
@@ -136,13 +159,31 @@
         // #endregion
         
         // #region config function
-        const resetConfig = () => {
-            if(config !== theme)
+        const resetConfig = async () => {
+            if(config !== theme) {
                 setConfig(theme);
+            }
+                
+            if(siteData !== globalSiteData){
+                iframeRef.current?.contentWindow?.postMessage({
+                    type:"RESET_CONTENT"
+                },"*")
+                setSiteData(globalSiteData);
+            }
+                
         }
 
-        const saveConfig = () => {
-            localStorage.setItem('config',JSON.stringify(config))
+        const SaveAll = async () => {
+            await new Promise(resolve => setTimeout(resolve,500))
+            await saveConfig();
+            await saveSiteData();
+        }
+
+        const saveConfig = async () => {
+            await localStorage.setItem('config',JSON.stringify(config))
+        }
+        const saveSiteData = async () => {
+            await localStorage.setItem('sitedata',JSON.stringify(siteData))
         }
 
         const setDeep = (obj:any, path: string, value:any): any => {
@@ -163,13 +204,30 @@
             // Gán giá trị vào key cuối cùng của object "current" lúc này
             const lastKey = keys[keys.length - 1];
             if(current[lastKey] !== value){
-                current[lastKey] = value; 
+                current[lastKey] = value;
                 return newConfig;
             }
+
+           
 
             return obj;
             
         }
+        
+        const getDeep = (obj:any, path: string): any | null => {
+            const newObj = JSON.parse(JSON.stringify(obj)); 
+            const keys = path.split('.');
+            let current = newObj;
+            // Chạy vòng lặp đến phần tử SÁT CUỐI
+            for (let i = 0; i < keys.length; i++) {
+                const key = keys[i];
+                // Nếu đường dẫn không tồn tại, tự tạo object rỗng (phòng xa)
+                if (!(key in current)) current[key] = {}; 
+                current = current[key];
+            }
+            return current || null
+        }
+    
         const updateNestedConfig = (path: string, value: any) => {
             setConfig((prev) => {
                 if (!prev) return prev;

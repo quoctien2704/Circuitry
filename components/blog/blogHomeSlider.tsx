@@ -26,7 +26,7 @@ export function BlogHomeData({ article }: { article: ArticleData }) {
         <div className="relative overflow-hidden h-full rounded-4xl">
             <div className="h-full flex items-center justify-center">
                 <Image
-                    className="bg-gray-400 w-full h-full min-h-100"
+                    className="bg-gray-400 w-full object-cover h-full min-h-100 max-h-150"
                     src={article.image_src ?? '/empty_image.webp'}
                     loading="eager"
                     alt={article.title || 'No alt available'}

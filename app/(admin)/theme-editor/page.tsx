@@ -1,5 +1,6 @@
 "use client";
 import { EditorSideBar } from "@/components/admin/EditorSideBar";
+import { PrimaryButton } from "@/components/button/primaryButton";
 import { ReactIcon } from "@/components/Icon/ReactIcon";
 import { useTheme } from "@/theme/ThemeContext";
 import { useEffect, useRef, useState } from "react";
@@ -37,18 +38,24 @@ const menus: MenuItemData[] = [
 export default function ThemeEditorPage () {
 
     //State Data
-    
+    const [saving,setSavimg] = useState(false);
     const [isLoading,setIsLoading] = useState(true);
     const [currentWidth,setCurrentWidth] = useState("1440px");
 
     // Data
 
     // Provider Data
-    const { config, registerIframe,iframeRef } = useTheme();
+    const { config, registerIframe,iframeRef,SaveAll } = useTheme();
 
     const handleFinishedLoading = async () => {
         await new Promise(resolve => setTimeout(resolve,1000));
         setIsLoading(false)
+    }
+
+    const handleSaving = async () => {
+        setSavimg(true);
+        await SaveAll();
+        setSavimg(false);
     }
     // State Event
     useEffect(() => {
@@ -73,14 +80,14 @@ export default function ThemeEditorPage () {
                 <EditorSideBar />
             </div>
             <div className="flex-1 h-full flex flex-col">
-                <div className="py-2 flex items-center justify-center gap-4 border-b border-gray-200">
-                        {menus.map((item) => (
+                <div className="relative py-2 flex items-center justify-center gap-4 border-b border-gray-200 mix-blend-multiply">
+                    {menus.map((item) => (
                         <button
                             key={item.name}
                             role="button"
                             aria-label={`Button ${item.name}`}
                             onClick={() => setCurrentWidth(item.responsive)}
-                            className={`w-20 aspect-4/2 flex flex-col gap items-center justify-center px-3 py-2 rounded-md text-sm transition-all ${
+                            className={`w-20 aspect-4/2 flex flex-col gap items-center justify-center px-3 py-2 rounded-md text-sm transition-all mix-blend-multiply ${
                                 currentWidth === item.responsive 
                                 ? "bg-primary text-white shadow-md" 
                                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -89,10 +96,17 @@ export default function ThemeEditorPage () {
                             <ReactIcon name={item.icon} size={16} />
                             <span className="m-0 p-0 font-medium italic">{item.name}</span>
                         </button>
+                        
                     ))}
+                    <button
+                        role="button"
+                        className="absolute right-4 top-[50%] -translate-[50%] mix-blend-multiply"
+                        onClick={handleSaving}
+                    >
+                        <PrimaryButton content={saving ? "Savig..." : "Save"} />
+                    </button>
                 </div>
                 <div 
-                    
                     className="w-full h-full flex items-center justify-center bg-gray-400"
                 >
                     {/* Iframe */}

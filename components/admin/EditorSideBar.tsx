@@ -1,7 +1,7 @@
 "use client"
 
 import { useTheme } from "@/theme/ThemeContext";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { StylePicker } from "./EditorStylePickder";
 import { ReactIcon } from "../Icon/ReactIcon";
 import { ColorPicker } from "./EditorColorPicker";
@@ -32,16 +32,13 @@ export const EditorSideBar = () => {
 
     const handleOnCloseEditorHelper = () => {
 
+
+        // Note: I Still don't know how to fix it when you are on mobile mode so please don't resize it on mobile mode xd
         setIsOpenHelperEditor(false);
         setBoxID(null);
     }
 
     const handleOpenHelperEditor = (box_id: string | null) => {
-        if( window.innerWidth < 1024){
-            setIsOpenHelperEditor(false);
-            setBoxID(null);
-            return;
-        }
         setIsOpenHelperEditor(true);
         setBoxID(box_id);
     }
@@ -142,12 +139,12 @@ export const EditorSideBar = () => {
 }
 
 export const EditorSiteMenu = ({name,value,event}:{name:string,value:fieldSiteData,event:(box_menu: string | null) => void}) => {
+
     const [openEditSectionMenu,setOpenEditSectionMenu] = useState(false);
 
     const handleOpenEditSectionMenu = () => {
         setOpenEditSectionMenu(prev => !prev)
     }
-
     return(
         <div className="flex flex-col gap-2 ">
             <div className="flex justify-between items-center">
@@ -165,13 +162,13 @@ export const EditorSiteMenu = ({name,value,event}:{name:string,value:fieldSiteDa
                         {
                             switch(typeof value){
                                 case 'string':
-                                    return <EditorSiteMenuField event={event} key={key} id={key} value={value} pathName={name}/>
+                                    return <EditorSiteMenuField event={event} key={key} id={key} pathName={name}/>
                                 
                                 case "object":
                                     if(Array.isArray(value)) 
-                                        return <EditorSiteMenuListNumber key={key} id={key} value={value} />
+                                        return <EditorSiteMenuListNumber pathName={name} key={key} id={key} value={value} event={event} />
                                     else
-                                        return <EditorSiteMenuImage key={key} id={key} value={value} />
+                                        return <EditorSiteMenuImage pathName={name} key={key} id={key} value={value} event={event} />
 
                                 default: return (
                                     <div key={key} className="flex flex-col gap-2">
@@ -191,13 +188,22 @@ export const EditorSiteMenu = ({name,value,event}:{name:string,value:fieldSiteDa
     )   
 }
 
-export const EditorSiteMenuField = ({id,value,pathName,event}:{id:string,value:string,pathName: string,event: (box_menu:string | null) => void}) => {
-    const ids = id.split("_");
+interface SiteMenuFieldType {
+    id:string,
+    pathName: string,
+    event: (box_menu:string | null) => void
+}
 
-    const { layoutName,updateNestedSiteData,iframeRef } = useTheme();
+export const EditorSiteMenuField = ({id,pathName,event}:SiteMenuFieldType) => {
+    const ids = id.split("_");
+    
+    const { layoutName, updateNestedSiteData, iframeRef, selectedSiteData, getDeep } = useTheme();
+
+    const defaultValue = getDeep(selectedSiteData,`${pathName}.${id}`);
+    const updatePathName = `${layoutName}.${pathName}.${id}`    
+
 
     const updateField = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const updatePathName = `${layoutName}.${pathName}.${id}`
         updateNestedSiteData(updatePathName,e.target.value)
         iframeRef.current?.contentWindow?.postMessage({
             type:"UPDATE_CONTENT_FIELD",
@@ -208,11 +214,6 @@ export const EditorSiteMenuField = ({id,value,pathName,event}:{id:string,value:s
         },"*")
     }
 
-    const getBoxFromElementId = (id: string): string | null => {
-
-        return id;
-    };
-
     return (
         <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center">
@@ -221,7 +222,7 @@ export const EditorSiteMenuField = ({id,value,pathName,event}:{id:string,value:s
                     role="button"
                     className="text-foreground/20 hover:text-foreground cursor-pointer transition-color duration-300 outline-none"
                     title={`Clikc this to go to element with ID: ${id}`}
-                    onClick={() => event(getBoxFromElementId(id))}
+                    onClick={() => event(id)}
                 >
                     <ReactIcon 
                         size={24} 
@@ -233,7 +234,7 @@ export const EditorSiteMenuField = ({id,value,pathName,event}:{id:string,value:s
                 type="text" 
                 id={`input_${id}`}
                 name="key" 
-                defaultValue={value || 'Empty'} 
+                value={defaultValue ?? ''} 
                 className="border-2 px-2 font-mono py-1 rounded-md outline-none border-foreground/20"
                 onChange={updateField}
             />
@@ -241,23 +242,51 @@ export const EditorSiteMenuField = ({id,value,pathName,event}:{id:string,value:s
     )
 }
 
-export const EditorSiteMenuListNumber = ({id,value}:{id:string,value:number[]}) => {
 
-    const articles = getArticleAsCustomBlog(value);
+
+interface SiteMenuArticlesType {
+    id:string,
+    value:number[],
+    pathName: string,
+    event: (box_menu:string | null) => void
+}
+
+export const EditorSiteMenuListNumber = ({id,pathName,event}:SiteMenuArticlesType) => {
+    
+    const { layoutName, updateNestedSiteData, iframeRef, selectedSiteData, getDeep } = useTheme();
     const ids = id.split("_");
+
+    const defaultValue: number[] = getDeep(selectedSiteData,`${pathName}.${id}`) || [];
+    const articles = getArticleAsCustomBlog(defaultValue);
+
+    const updateField = (e: React.ChangeEvent<HTMLSelectElement>,index: number) => {
+        const value = parseInt(e.target.value)
+        const updatePathName = `${layoutName}.${pathName}.${id}.${index}`
+        updateNestedSiteData(updatePathName,value)
+        iframeRef.current?.contentWindow?.postMessage({
+            type:"UPDATE_CONTENT_ARTICLES",
+            payload:{
+                updatePathName,
+                value: value
+            }
+        },"*")
+    }
+
     return (
         <div className="flex flex-col gap-4 py-4">
             <div className="flex justify-between items-center">
                 <label className="text-base font-medium uppercase" htmlFor={id}>Articles ID: {ids[ids.length-1]}</label>
-                <span 
-                    className="text-foreground/20"
-                    title={`Clikc this to go to articles with ID: ${id}`}
+                <button 
+                    role="button"
+                    className="text-foreground/20 hover:text-foreground cursor-pointer transition-color duration-300 outline-none"
+                    title={`Clikc this to go to element with ID: ${id}`}
+                    onClick={() => event(id)}
                 >
                     <ReactIcon 
                         size={24} 
                         name="circle_question_icon" 
                     />
-                </span>
+                </button>
             </div>
             <ul className="flex flex-col gap-2">
                 {articles.map((article,index) => (
@@ -267,10 +296,10 @@ export const EditorSiteMenuListNumber = ({id,value}:{id:string,value:number[]}) 
                             id={article.id.toString()} 
                             defaultValue={article.id} 
                             className="border w-full p-1 px-2 font-medium border-gray-400 rounded-md"
-                            onChange={e => console.log(e.target.value)}
+                            onChange={e => updateField(e,index)}
                         >
-                            {articlesData.map((article) => (
-                                <option key={article.id} value={article.id}>{article.title}</option>
+                            {articlesData.map((globalArticle) => (
+                                <option  disabled={defaultValue.includes(globalArticle.id)} key={globalArticle.id} value={globalArticle.id}>{globalArticle.title}</option>
                             ))}
                         </select>
                     </li>
@@ -280,39 +309,78 @@ export const EditorSiteMenuListNumber = ({id,value}:{id:string,value:number[]}) 
     )
 }
 
-export const EditorSiteMenuImage = ({id,value}:{id:string,value: EditorValue}) => {
+interface imageTypeProperties { 
+    src: string,
+    alt: string,
+    width: number,
+    height: number
+}
+
+export const EditorSiteMenuImage = ({id,value,pathName,event}:{id:string,value: EditorValue,pathName: string,event: (box_menu:string | null) => void}) => {
+
+
+    const { layoutName, updateNestedSiteData, iframeRef, selectedSiteData, getDeep } = useTheme();
     const ids = id.split("_");
-    const imageTypeProperties = {
-        src: "text",
-        alt: "text",
-        width: "number",
-        height: "number"
+
+    const defaultValue: imageTypeProperties = getDeep(selectedSiteData,`${pathName}.${id}`) || {src:"",alt:"",width:0,height:0};
+
+    const updateField = (e: React.ChangeEvent<HTMLInputElement>,src: string) => {
+        let value;
+        switch(e.target.type){
+            case 'text': value=e.target.value; break;
+            case 'number': value=parseInt(e.target.value); break;
+        }
+        const updatePathName = `${layoutName}.${pathName}.${id}.${src}`
+        updateNestedSiteData(updatePathName,value)
+        iframeRef.current?.contentWindow?.postMessage({
+            type:"UPDATE_CONTENT_IMAGE",
+            payload:{
+                updatePathName,
+                value: value
+            }
+        },"*")
     }
+
     if(value.type === 'image') {
         return (
             <div className="flex flex-col gap-4 py-4">
                 <div className="flex justify-between items-center">
                     <h3 className="text-base font-medium uppercase">Image ID: {ids[ids.length-1]}</h3>
-                    <span 
-                        className="text-foreground/20"
-                        title={`Clikc this to go to Image with ID: ${id}`}
+                    <button 
+                        role="button"
+                        className="text-foreground/20 hover:text-foreground cursor-pointer transition-color duration-300 outline-none"
+                        title={`Clikc this to go to element with ID: ${id}`}
+                        onClick={() => event(id)}
                     >
                         <ReactIcon 
                             size={24} 
                             name="circle_question_icon" 
                         />
-                    </span>
+                    </button>
                 </div>
                 <div className="flex flex-col gap-4">
-                    {Object.entries(imageTypeProperties).map(([key,props],index) => {
-                        const val = value[key as keyof EditorValue];
+                    {Object.entries(defaultValue).map(([key,props],index) => {
+                        const type = (typeof props === 'string') ? "text" : 'number'
+                        if(props==='image')return;
                         return (
-                            <div key={key} className="flex justify-between items-center">
-                                <label className="text-sm font-medium uppercase min-w-20" htmlFor={`${key} - ${index}`}>{key} : </label>
-                                <input type={props || 'text'} id={`${key} - ${index}`} name="key" defaultValue={val} className="border-2 px-2 font-mono py-1 rounded-md outline-none border-foreground/20 flex-1"></input>
+                            <div 
+                                key={key} 
+                                className="flex justify-between items-center"
+                            >
+                                <label 
+                                    className="text-sm font-medium uppercase min-w-20" 
+                                    htmlFor={`${key} - ${index}`}>{key} : 
+                                </label>
+                                <input  
+                                    type={type} 
+                                    id={`${key} - ${index}`} 
+                                    name={`${key} - ${index}`}
+                                    value={props || 0} 
+                                    onChange={e => updateField(e,key)}
+                                    className="border-2 px-2 font-mono py-1 rounded-md outline-none border-foreground/20 flex-1"
+                                />
                             </div>                                
                         )
-
                     })}
                 </div>
             </div>
