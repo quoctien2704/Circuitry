@@ -1,3 +1,5 @@
+import { memo } from "react"
+
 /**
  * A reusable primary button component that serves as the main call-to-action (CTA).
  * It utilizes the 'primary' theme color for its base state and features a high-contrast 
@@ -5,7 +7,7 @@
  * * @param {string} content - The text label to be displayed inside the button.
  */
 
-export function PrimaryButton({ content }: { content: string }) {
+export const PrimaryButton = memo(({ content }: { content: string }) => {
 
     /**
      * Renders a button with the platform's primary branding.
@@ -25,4 +27,4 @@ export function PrimaryButton({ content }: { content: string }) {
             </span>
         </div>
     )
-}
+})

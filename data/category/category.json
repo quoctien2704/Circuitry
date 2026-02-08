@@ -4,6 +4,7 @@
         "name": "Accessories",
         "slug": "accessories",
         "image": {
+            "type":"image",
             "src": "/category/accessories.jpg",
             "alt": "This is Accessories category",
             "width": 256,
@@ -16,6 +17,7 @@
         "name": "Audio",
         "slug": "audio",
         "image": {
+            "type":"image",
             "src": "/category/audio.jpg",
             "alt": "This is Audio category",
             "width": 256,
@@ -28,6 +30,7 @@
         "name": "Technology",
         "slug": "technology",
         "image": {
+            "type":"image",
             "src": "/category/technology.jpg",
             "alt": "This is Technology category",
             "width": 256,
@@ -40,6 +43,7 @@
         "name": "Computer",
         "slug": "computer",
         "image": {
+            "type":"image",
             "src": "/category/computer.jpg",
             "alt": "This is Computer category",
             "width": 256,
@@ -52,6 +56,7 @@
         "name": "Tips",
         "slug": "tips",
         "image": {
+            "type":"image",
             "src": "/category/tips.jpg",
             "alt": "This is Tips category",
             "width": 256,
@@ -64,6 +69,7 @@
         "name": "Mobile",
         "slug": "mobile",
         "image": {
+            "type":"image",
             "src": "/category/mobile.jpg",
             "alt": "This is Mobile category",
             "width": 256,
@@ -76,6 +82,7 @@
         "name": "Smart Home",
         "slug": "smart-home",
         "image": {
+            "type":"image",
             "src": "/category/smart-home.jpg",
             "alt": "This is Smart Home category",
             "width": 256,
@@ -88,6 +95,7 @@
         "name": "Opinion",
         "slug": "opinion",
         "image": {
+            "type":"image",
             "src": "/category/opinion.jpg",
             "alt": "This is Opinion category",
             "width": 256,
@@ -100,6 +108,7 @@
         "name": "Trend",
         "slug": "trend",
         "image": {
+            "type":"image",
             "src": "/category/trend.jpg",
             "alt": "This is Trend category",
             "width": 256,
@@ -112,6 +121,7 @@
         "name": "Guide",
         "slug": "guide",
         "image": {
+            "type":"image",
             "src": "/category/guide.jpg",
             "alt": "This is Guide category",
             "width": 256,
@@ -124,6 +134,7 @@
         "name": "Work",
         "slug": "work",
         "image": {
+            "type":"image",
             "src": "/category/work.jpg",
             "alt": "This is Work category",
             "width": 256,
@@ -136,6 +147,7 @@
         "name": "Gift",
         "slug": "gift",
         "image": {
+            "type":"image",
             "src": "/category/gift.jpg",
             "alt": "This is Gift category",
             "width": 256,

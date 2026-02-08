@@ -111,20 +111,42 @@
     "home": {
         "layout_1": {
             "slider": {
-                "home_layout_one_header_001": "Welcome to Circuitry",
-                "home_layout_one_sub_header_002": "Seeallpost",
-                "home_layout_one_sub_header_href_003": "/blog",
-                "home_layout_one_bottom_left_sliders_article_data_004": [
-                    1,
-                    2,
-                    3,
-                    4
-                ],
-                "home_layout_one_top_right_item_title_005": "Latest Gadgets",
-                "home_layout_one_top_right_item_medium_title_006": "Tech News & Reviews",
-                "home_layout_one_top_right_item_big_title_007": "Stay Updated",
-                "home_layout_one_top_right_item_link_text_008": "Read More",
-                "home_layout_one_top_right_item_link_href_009": "/blog/latest",
+                "home_layout_one_header_001": {
+                    "type":"text",
+                    "data":"Welcome to Circuitry"
+                },
+                "home_layout_one_sub_header_002": {
+                    "type":"text",
+                    "data":"Seeallpost"
+                },
+                "home_layout_one_sub_header_href_003": {
+                    "type":"text",
+                    "data":"/blog"
+                },
+                "home_layout_one_bottom_left_sliders_article_data_004": {
+                    "type":"articles",
+                    "data":[1,2,3,4]
+                },
+                "home_layout_one_top_right_item_title_005": {
+                    "type":"text",
+                    "data":"Latest Gadgets"
+                },
+                "home_layout_one_top_right_item_medium_title_006": {
+                    "type":"text",
+                    "data":"Tech News & Reviews"
+                },
+                "home_layout_one_top_right_item_big_title_007": {
+                    "type":"text",
+                    "data":"Stay Updated"
+                },
+                "home_layout_one_top_right_item_link_text_008": {
+                    "type":"text",
+                    "data":"Read More"
+                },
+                "home_layout_one_top_right_item_link_href_009": {
+                    "type":"text",
+                    "data":"/blog/latest"
+                },
                 "home_layout_one_bottom_right_image_010": {
                     "type":"image",
                     "src": "/pages/home/home_slider_right_bottom.jpg",
@@ -132,19 +154,28 @@
                     "width": 600,
                     "height": 600
                 },
-                "home_layout_one_bottom_right_button_content_011": "Read more",
-                "home_layout_one_bottom_right_button_href_012": "/blog"
+                "home_layout_one_bottom_right_button_content_011": {
+                    "type":"text",
+                    "data":"Read more"
+                },
+                "home_layout_one_bottom_right_button_href_012": {
+                    "type":"text",
+                    "data":"/blog"
+                }
             },
             "category": {
-                "categories": [
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7
-                ]
+                "categories": {
+                    "type":"category",
+                    "items":[
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7
+                    ]
+                }
             },
             "latest": {
                 "header": "Latest New",
@@ -208,7 +239,7 @@
             "subscribe": {
                 "image": {
                     "type":"image",
-                    "src": "/support.jpg",
+                    "src": "/pages/home/layout_2/support.jpg",
                     "alt": "Circuitry Newsletter",
                     "width": 600,
                     "height": 400
@@ -232,7 +263,7 @@
                 "right": {
                     "image_container": {
                         "type":"image",
-                        "src": "/HomeHeroThreeImage.jpg",
+                        "src": "/pages/home/layout_3/home_hero_banner_3.jpg",
                         "width": 500,
                         "height": 500,
                         "alt": "Home Hero Three Image"
@@ -294,7 +325,7 @@
                 "left": {
                     "image": {
                         "type":"image",
-                        "src": "/home_support_3.jpg",
+                        "src": "/pages/home/layout_3/home_support_3.jpg",
                         "width": 2000,
                         "height": 2000,
                         "alt": "Join the Circuitry"

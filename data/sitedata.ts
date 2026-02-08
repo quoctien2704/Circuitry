@@ -2,13 +2,13 @@ import {
     AboutData,
     AuthorData,
     BlogPageData,
-    CategoryData,
     ChangeLogPageData,
     FooterData, GlobalArticleListData, HeaderData,
     HomeLayoutFourData,
     HomeLayoutOneData,
     HomeLayoutThreeData,
     HomeLayoutTwoData,
+    LayoutCategoryData,
     MembershipData,
     siteDataType,
     TermsData
@@ -42,7 +42,7 @@ export const membershipData = rawSiteData.membership satisfies MembershipData
 export const termsData = rawSiteData.terms satisfies TermsData
 
 // Category page data
-export const categoryData = rawSiteData.category satisfies CategoryData
+export const categoryData = rawSiteData.category satisfies LayoutCategoryData
 
 // Author page data
 export const authorData = rawSiteData.author satisfies AuthorData

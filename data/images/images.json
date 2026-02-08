@@ -1,0 +1,25 @@
+{
+    "articles": {
+        "article_1_image_jpg": "/article/article_1.jpg",
+        "article_2_image_jpg": "/article/article_2.jpg",
+        "article_3_image_jpg": "/article/article_3.jpg",
+        "article_4_image_jpg": "/article/article_4.jpg",
+        "article_5_image_jpg": "/article/article_5.jpg",
+        "article_6_image_jpg": "/article/article_6.jpg",
+        "article_7_image_jpg": "/article/article_7.jpg",
+        "article_8_image_jpg": "/article/article_8.jpg",
+        "article_9_image_jpg": "/article/article_9.jpg",
+        "article_10_image_jpg": "/article/article_10.jpg",
+        "article_11_image_jpg": "/article/article_11.jpg",
+        "article_12_image_jpg": "/article/article_12.jpg",
+        "article_13_image_jpg": "/article/article_13.jpg",
+        "article_14_image_jpg": "/article/article_14.jpg",
+        "article_15_image_jpg": "/article/article_15.jpg"
+    },
+    "author": {
+        "alex_carter_jpg":"/author/alex-carter.jpg",
+        "chris_spiegl_CSJPm2POibQ_unsplash_jpg":"/author/chris-spiegl-CSJPm2POibQ-unsplash.jpg",
+        "daniel_wright_jpg":"/author/daniel-wright.jpg",
+        "mia_johnson_jpg":"/author/mia-johnson.jpg"
+    }
+}

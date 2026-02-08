@@ -2,7 +2,7 @@
 import { EditorSideBar } from "@/components/admin/EditorSideBar";
 import { PrimaryButton } from "@/components/button/primaryButton";
 import { ReactIcon } from "@/components/Icon/ReactIcon";
-import { useTheme } from "@/theme/ThemeContext";
+import { useThemeActions,useThemeData } from "@/theme/ThemeContext";
 import { useEffect, useRef, useState } from "react";
 
 interface MenuItemData {
@@ -45,27 +45,29 @@ export default function ThemeEditorPage () {
     // Data
 
     // Provider Data
-    const { config, registerIframe,iframeRef,SaveAll } = useTheme();
+
+    const { registerIframe } = useThemeActions();
 
     const handleFinishedLoading = async () => {
         await new Promise(resolve => setTimeout(resolve,1000));
         setIsLoading(false)
     }
 
-    const handleSaving = async () => {
-        setSavimg(true);
-        await SaveAll();
-        setSavimg(false);
-    }
+    // const handleSaving = async () => {
+    //     setSavimg(true);
+    //     await SaveAll();
+    //     setSavimg(false);
+    // }
     // State Event
-    useEffect(() => {
-        if(iframeRef.current && iframeRef.current.contentWindow) {
-            iframeRef.current.contentWindow.postMessage({
-                type:"UPDATE_CONFIG",
-                payload:config
-            },"*")
-        }
-    },[config])
+    
+    // useEffect(() => {
+    //     if(iframeRef.current && iframeRef.current.contentWindow) {
+    //         iframeRef.current.contentWindow.postMessage({
+    //             type:"UPDATE_CONFIG",
+    //             payload:config
+    //         },"*")
+    //     }
+    // },[config])
 
     return (
         <div className="relative flex h-screen max-h-screen">
@@ -101,7 +103,7 @@ export default function ThemeEditorPage () {
                     <button
                         role="button"
                         className="absolute right-4 top-[50%] -translate-[50%] mix-blend-multiply"
-                        onClick={handleSaving}
+                        // onClick={handleSaving}
                     >
                         <PrimaryButton content={saving ? "Savig..." : "Save"} />
                     </button>
@@ -119,7 +121,6 @@ export default function ThemeEditorPage () {
                     ></iframe>
                 </div>
             </div>
-            
         </div>
     )
 }

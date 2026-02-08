@@ -22,7 +22,14 @@ export type CategoryData = {
     name: string
     image: ImageData;
     link: string;
+    slug?: string
 }
+
+export type CategoryShowCase = {
+    type: string;
+    items: number[];
+}
+
 
 export type BlogData = {
     id: number

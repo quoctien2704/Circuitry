@@ -1,5 +1,6 @@
-import { BlogData, BreadCrumbData } from "./item";
+import { BreadCrumbData, CategoryShowCase } from "./item";
 import { NavLinks } from "./menu"
+import { FieldArticlesData, FieldTextData } from "./types";
 
 export type LinksData = {
     name: string,
@@ -44,22 +45,23 @@ export type ImageData = {
     height: number;
 }
 
+    
 
 // Home One
 
 export type HomeSliderData = {
-    home_layout_one_header_001: string;
-    home_layout_one_sub_header_002?: string;
-    home_layout_one_sub_header_href_003?: string;
-    home_layout_one_bottom_left_sliders_article_data_004: number[];
-    home_layout_one_top_right_item_title_005: string;
-    home_layout_one_top_right_item_medium_title_006: string;
-    home_layout_one_top_right_item_big_title_007: string;
-    home_layout_one_top_right_item_link_text_008: string;
-    home_layout_one_top_right_item_link_href_009: string;
+    home_layout_one_header_001: FieldTextData;
+    home_layout_one_sub_header_002: FieldTextData;
+    home_layout_one_sub_header_href_003: FieldTextData;
+    home_layout_one_bottom_left_sliders_article_data_004: FieldArticlesData;
+    home_layout_one_top_right_item_title_005: FieldTextData;
+    home_layout_one_top_right_item_medium_title_006: FieldTextData;
+    home_layout_one_top_right_item_big_title_007: FieldTextData;
+    home_layout_one_top_right_item_link_text_008: FieldTextData;
+    home_layout_one_top_right_item_link_href_009: FieldTextData;
     home_layout_one_bottom_right_image_010: ImageData;
-    home_layout_one_bottom_right_button_content_011: string;
-    home_layout_one_bottom_right_button_href_012: string;
+    home_layout_one_bottom_right_button_content_011: FieldTextData;
+    home_layout_one_bottom_right_button_href_012: FieldTextData;
 }
 
 export type HomeLatestNewData = {
@@ -69,7 +71,7 @@ export type HomeLatestNewData = {
 }
 
 export type HomeCategoryData = {
-    categories: number[];
+    categories: CategoryShowCase;
 }
 
 export type HomeTrendingData = {
@@ -284,7 +286,7 @@ export interface siteDataType {
     about: AboutData,
     membership: MembershipData,
     terms: TermsData,
-    category: CategoryData
+    category: LayoutCategoryData
     author: AuthorData
     blog: BlogPageData
     footer: FooterData,
@@ -426,7 +428,7 @@ export type CategoryListData = {
     sub_title_href: string;
 }
 
-export type CategoryData = {
+export type LayoutCategoryData = {
     image: ImageData
     list: CategoryListData
     breadcrumb: BreadCrumbData
@@ -477,9 +479,6 @@ export type ChangeLogPageData = {
 
 export type EditorValue = ImageData | SocialLinksData;
 
-export interface fieldSiteData {
-    [key:string]: string | number | number[] | EditorValue
-}
-export interface layoutSiteData {
-    [key:string]:fieldSiteData
-}
+
+
+

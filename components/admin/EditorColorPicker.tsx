@@ -1,41 +1,53 @@
-import { useTheme } from "@/theme/ThemeContext";
-import { useEffect, useState } from "react";
+import { useThemeData } from "@/theme/ThemeContext";
+import { memo, useCallback, useEffect, useState } from "react";
 
-export const ColorPicker = ({ theme_name, title, color, type }: { theme_name:string, title: string, color: string, type:string }) => {
-    const { iframeRef,updateNestedConfig } = useTheme();
-    // Khởi tạo trực tiếp từ props để tránh useEffect thừa
-    const [localColor, setLocalColor] = useState<string>(color);
+export const ColorPicker = memo(({ color,name, onUpdateConfig } : { 
+    color: string,
+    name: string,
+    onUpdateConfig: (updateValue: string) => void 
+}) => {
 
-    const handleLocalColorChange = (value: string) => {
-        // 1. Cập nhật State Local TRƯỚC để Input mượt mà
-        setLocalColor(value);
-        // 2. Dùng requestAnimationFrame để gửi tin nhắn 
-        // Nó sẽ đợi trình duyệt rảnh (thường là sau khi vẽ xong UI) mới gửi tin
-        requestAnimationFrame(() => {
-            iframeRef.current?.contentWindow?.postMessage({
-                type: type,
-                payload: value
-            }, "*");
-        });
-    };
+    const { iframeRef } = useThemeData();
 
-    // Cập nhật lại màu khi đổi Preset (config thay đổi)
+    const [localColor,setLocalColor] = useState<string>(color);
+
     useEffect(() => {
         setLocalColor(color);
     }, [color]);
 
+    const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+        const val = e.target.value;
+        setLocalColor(val);
+
+        requestAnimationFrame(() => {
+            iframeRef?.current?.contentWindow?.postMessage({
+                type:`UPDATE_COLOR_${name.toUpperCase()}`,
+                payload: val,
+            },"*")
+        })
+
+    },[])
+    
+    const handleBlur = useCallback(() => {
+            // Kiểm tra an toàn trước khi gọi hàm
+            if (typeof onUpdateConfig === "function") {
+                onUpdateConfig(localColor);
+            }
+    }, [onUpdateConfig, localColor]);
+
     return (
         <div className="flex justify-between items-center">
-            <label htmlFor={title} className="font-medium italic uppercase">{title} Color: </label>
+            <label htmlFor={name} className="font-medium italic uppercase">{name} Color: </label>
             <input 
-                id={title}
+                id={name}
                 className="aspect-square w-10 h-10 cursor-pointer" 
                 type="color" 
                 value={localColor} 
-                // Dùng onInput thường mượt hơn onChange cho Color Picker trong một số trình duyệt
-                onInput={(e) => handleLocalColorChange(e.currentTarget.value)} 
-                onBlur={(e) => updateNestedConfig(`colors.${theme_name}.${title.toLowerCase()}`,e.target.value)}
+                onChange={handleChange}
+                onBlur={handleBlur}
             />
         </div>
     );
-};
+},(prevProps, nextProps) => {
+    return prevProps.color === nextProps.color &&   prevProps.name === nextProps.name
+});

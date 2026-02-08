@@ -17,7 +17,7 @@ export function HomeCategory() {
      * Initializes the categories state by filtering/fetching category details 
      * based on an array of IDs provided in the 'homeData' configuration.
      */
-    const [categorys] = useState(getCategoryByArrayID(homeData.category.categories))
+    const [categorys] = useState(getCategoryByArrayID(homeData.category.categories.items))
     return (
         <section className="my-30 max-lg:my-1">
             <div className="container mx-auto px-4">

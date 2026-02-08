@@ -14,7 +14,7 @@ import Image from 'next/image'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { useTheme } from '@/theme/ThemeContext';
+import { useThemeData } from '@/theme/ThemeContext';
 
 /**
  * HomeSlider Component
@@ -23,8 +23,8 @@ import { useTheme } from '@/theme/ThemeContext';
  */
 export function HomeSlider() {
     // Access global site data from the theme context
-    const { siteData } = useTheme();
-    const slider = siteData.home.layout_1.slider;
+    const { siteData } = useThemeData();
+    const slider = useMemo(() => siteData.home.layout_1.slider,[siteData.home.layout_1.slider]);
 
     /**
      * Map and validate slider data.
@@ -32,23 +32,23 @@ export function HomeSlider() {
      * Provides fallback values to prevent "undefined" errors during rendering.
      */
     const data = useMemo(() => ({
-        header: slider.home_layout_one_header_001 || "No header text available",
-        sub_header: slider.home_layout_one_sub_header_002 || 'No sub header text available', 
-        sub_header_href: slider.home_layout_one_sub_header_href_003 || '/',
-        bottom_left_sliders_article_data: slider.home_layout_one_bottom_left_sliders_article_data_004 || [1,2,3,4],
-        top_right_item_title: slider.home_layout_one_top_right_item_title_005 || 'No title available',
-        top_right_item_medium_title: slider.home_layout_one_top_right_item_medium_title_006 || 'No medium title available',
-        top_right_item_big_title: slider.home_layout_one_top_right_item_big_title_007 || 'No big title available',
-        top_right_item_link_text: slider.home_layout_one_top_right_item_link_text_008 || 'No text available',
-        top_right_item_link_href: slider.home_layout_one_top_right_item_link_href_009 || '/',
+        header: slider.home_layout_one_header_001.data || "No header text available",
+        sub_header: slider.home_layout_one_sub_header_002.data || 'No sub header text available', 
+        sub_header_href: slider.home_layout_one_sub_header_href_003.data || '/',
+        bottom_left_sliders_article_data: slider.home_layout_one_bottom_left_sliders_article_data_004.data || [1,2,3,4],
+        top_right_item_title: slider.home_layout_one_top_right_item_title_005.data || 'No title available',
+        top_right_item_medium_title: slider.home_layout_one_top_right_item_medium_title_006.data || 'No medium title available',
+        top_right_item_big_title: slider.home_layout_one_top_right_item_big_title_007.data || 'No big title available',
+        top_right_item_link_text: slider.home_layout_one_top_right_item_link_text_008.data || 'No text available',
+        top_right_item_link_href: slider.home_layout_one_top_right_item_link_href_009.data || '/',
         bottom_right_image: {
             src: slider.home_layout_one_bottom_right_image_010.src || 'empty_image.webp',
             alt: slider.home_layout_one_bottom_right_image_010.alt || "Alt not available",
             width: homeData.slider.home_layout_one_bottom_right_image_010.width || 600,
             height: homeData.slider.home_layout_one_bottom_right_image_010.height || 600
         },
-        bottom_right_button_content: slider.home_layout_one_bottom_right_button_content_011 || "No button content available",
-        bottom_right_button_href: slider.home_layout_one_bottom_right_button_href_012 || "/"
+        bottom_right_button_content: slider.home_layout_one_bottom_right_button_content_011.data || "No button content available",
+        bottom_right_button_href: slider.home_layout_one_bottom_right_button_href_012.data || "/"
     }), [slider]);
 
     // Initialize articles based on the IDs provided in the data
@@ -95,7 +95,7 @@ export function HomeSlider() {
                             <div className="relative flex flex-col gap-4 overflow-hidden bg-gray-400 rounded-4xl aspect-square h-full items-center justify-center max-xl:flex-1">
                                 <Image
                                     id='home_layout_one_bottom_right_image_010'
-                                    loading='eager'
+                                    loading='lazy'
                                     className="w-full h-full object-cover"
                                     src={data.bottom_right_image.src}
                                     alt={data.bottom_right_image.alt}

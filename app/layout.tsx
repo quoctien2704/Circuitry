@@ -94,6 +94,12 @@ export default function RootLayout({
         <html
             lang="en"
             className="md-lds mdl-js"
+            style={{
+                    "--primary": "#ff9671",
+                    "--secondary": "#845ec2",
+                    "--background": "#ffffff",
+                    "--foreground": "#0F172A",
+            } as any}
         >
             <body>
                 <ThemeProvder>
